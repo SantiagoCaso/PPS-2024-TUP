@@ -1,8 +1,8 @@
-import { Nav } from "./components/Nav/Main";
+import { Nav } from "./components/Nav/NavBar";
 
 function App() {
   return (
-    <div className="w-full h-screen grid place-content-center text-white bg-[#333]">
+    <div className="w-full font-geist ">
       <Nav />
     </div>
   );

@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer components{
+  .bar {
+    @apply h-[2px] transition-all duration-700 rounded-full z-10 w-full bg-white;
+  }
+}
