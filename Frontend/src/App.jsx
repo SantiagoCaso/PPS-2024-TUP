@@ -1,9 +1,9 @@
-import { Nav } from "./components/Nav/NavBar";
+import { NavBar } from "./components/Nav/NavBar";
 
 function App() {
   return (
     <div className="w-full font-geist ">
-      <Nav />
+      <NavBar />
     </div>
   );
 }
