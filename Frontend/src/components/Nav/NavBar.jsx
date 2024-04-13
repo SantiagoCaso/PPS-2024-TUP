@@ -1,6 +1,6 @@
 import { Cart } from "../icons/Cart";
+import Logo from "../icons/Logo";
 import { OpenMenu } from "../icons/OpenMenu";
-import { Logo } from "../shared/Logo";
 
 export const NavBar = () => {
   return (
