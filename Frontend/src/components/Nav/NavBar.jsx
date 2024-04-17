@@ -1,15 +1,20 @@
+import { ToggleButton } from "../../context/Nav/ToggleButton";
 import { Cart } from "../icons/Cart";
-import { OpenMenu } from "../icons/OpenMenu";
-import { Logo } from "../shared/Logo";
+import { Logo } from "../icons/Logo";
+
+import Menu from "./Menu";
 
 export const NavBar = () => {
   return (
-    <div className="bg-red-200 h-16 flex justify-between items-center px-5  relative">
-      <Logo />
-      <div className="w-full flex gap-5 items-center justify-end">
-        <Cart />
-        <OpenMenu />
+    <nav className="bg-BgDark  px-5 relative">
+      <div className="flex h-16  justify-between items-center leading-[64px] ">
+        <Logo  customStyle='w-10  '/>
+        <div className="w-full flex gap-5 items-center justify-end">
+          <Menu />
+          <Cart />
+          <ToggleButton />
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
