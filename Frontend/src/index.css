@@ -5,7 +5,29 @@
 
 
 @layer components{
+
+
+  /* SHARED */
+
+   .borderLight{
+    @apply border-[1px] border-white border-opacity-20
+   }
+   .borderDark{
+    @apply border-[1px] border-black border-opacity-20
+   }
+  /* ICONS */
+
+  .icon{
+    @apply aspect-square w-8 fill-light cursor-pointer
+  }
+
+  /* NAV BAR */
+
+  .toggleButton {
+    @apply absolute z-[101] outline-none border-none bg-transparent top-7 right-5 select-none tablet:cursor-pointer;
+
+  }
   .bar {
-    @apply h-[2px] transition-all duration-700 rounded-full z-10 w-full bg-white;
+    @apply h-[2px] transition-all duration-700 rounded-full z-10 w-full bg-light;
   }
 }
