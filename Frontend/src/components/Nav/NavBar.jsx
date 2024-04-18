@@ -1,8 +1,8 @@
 import { ToggleButton } from "../../context/Nav/ToggleButton";
 import { Cart } from "../icons/Cart";
 import { Logo } from "../icons/Logo";
-
 import Menu from "./Menu";
+
 
 export const NavBar = () => {
   return (
