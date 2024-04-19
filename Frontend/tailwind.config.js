@@ -7,7 +7,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        geist: ['Geist', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+
+      },
+      colors:{
+        primaryDark:"#111111",
+        secondaryDark:"#191919",
+        BgDark:"#040406",
+        light:"#FEFAE0"
+      },screens: {
+        desktopSmall: '690px',
+
       },
     },
   },
