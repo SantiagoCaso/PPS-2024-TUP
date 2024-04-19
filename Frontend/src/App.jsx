@@ -3,7 +3,7 @@ import { NavProvider } from "./context/Nav/NavProvider";
 
 function App() {
   return (
-    <div className="w-full font-montserrat bg-BgDark text-light ">
+    <div className="w-full font-montserrat ">
       <NavProvider>
         <NavBar />
       </NavProvider>
