@@ -6,7 +6,7 @@ import Menu from "./Menu";
 
 export const NavBar = () => {
   return (
-    <nav className="bg-BgDark  px-5 relative">
+    <nav className="bg-BgDark text-light  px-5 relative">
       <div className="flex h-16  justify-between items-center leading-[64px] ">
         <Logo  customStyle='w-10  '/>
         <div className="w-full flex gap-5 items-center justify-end">
