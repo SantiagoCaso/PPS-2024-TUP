@@ -1,6 +1,6 @@
-export default function Profile() {
+export const Profile = () => {
   return (
-    <div className="space-y-12 border-4 border-black border-solid p-[10px] rounded-lg m-5">
+    <div className="space-y-12 border-4 border-black border-solid p-[10px] rounded-lg m-5 w-screen h-screen">
       <div className="px-4 sm:px-0">
         <h3 className="text-base font-semibold leading-7 text-gray-900">
           Perfil
@@ -31,4 +31,4 @@ export default function Profile() {
       </div>
     </div>
   );
-}
+};

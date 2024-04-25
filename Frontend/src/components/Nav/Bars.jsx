@@ -12,7 +12,9 @@ export const Bars = () => {
       ></div>
       <div
         className={`bar ${
-          showMenu ? " opacity-0" : "transition-all  duration-700 opacity-100"
+          showMenu
+            ? " opacity-0"
+            : "transition-all  duration-700 opacity-100 h-[1px]  bg-white"
         }`}
       ></div>
       <div
