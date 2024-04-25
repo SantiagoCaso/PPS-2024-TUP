@@ -5,18 +5,14 @@ import { NavContext } from "./NavContext";
 export const NavProvider = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const ProductCategories = [
-    "Pequeños",
-    "Medianos",
-    "grandes",
-  ];
+  const ProductCategories = ["Pequeños", "Medianos", "Grandes"];
 
   return (
     <NavContext.Provider
       value={{
         showMenu,
         setShowMenu,
-        ProductCategories
+        ProductCategories,
       }}
     >
       {children}

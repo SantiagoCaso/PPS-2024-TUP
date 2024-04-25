@@ -1,53 +1,52 @@
+import { useNavigation, useParams } from "react-router-dom";
 export default function Product() {
+  const navigation = useNavigation();
+
+  const { productId } = useParams();
+  if (navigation.state === "loading") {
+    return;
+  }
   return (
-    <>
-      <div className="bg-gray-100 ">
-        {/* Remove py-8 */}
-        <div className="mx-auto container py-8">
-          <div className="flex flex-wrap items-center lg:justify-between justify-center">
-            {/* Card 1 */}
-            <div className="mx-2 w-72 lg:mb-0 mb-8 border-black border-solid border-4 rounded">
-              <div>
-                <img
-                  src="https://cdn.tuk.dev/assets/templates/classified/Bitmap (1).png"
-                  className="w-full h-44"
-                />
-              </div>
-              <div className="bg-white ">
-                <div className="p-4">
-                  <div className="flex items-center">
-                    <h2 className="text-lg font-semibold">
-                      Nombre del producto
-                    </h2>
-                    <p className="text-xs text-gray-600 pl-5">Dto adicional</p>
-                  </div>
-                  <p className="text-xs text-gray-600 mt-2">Descripción</p>
-                  <p className="text-xs text-gray-600 mt-2">Descripción</p>
-                  <p className="text-xs text-gray-600 mt-2">Descripción</p>
-                  <div className="flex mt-4">
-                    <div>
-                      <p className="text-xs text-gray-600 px-2 bg-gray-200 py-1">
-                        Categoria del producto
-                      </p>
-                    </div>
-                    <div className="pl-2">
-                      <p className="text-xs text-gray-600 px-2 bg-gray-200 py-1">
-                        Stock (Available)
-                      </p>
-                    </div>
-                  </div>
-                  <div className=" flex-row-reverse  py-4">
-                    <h3 className="text-indigo-700 text-xl font-semibold">
-                      $Precio
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Card 1 Ends */}
-          </div>
+    <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 xl:grid-cols-4 2xl:grid-cols-5 px-10">
+      <article className=" mt-10  flex flex-col gap-5 max-w-xl group cursor-pointer ">
+        <div className="bg-bgLight rounded-lg grid place-items-center aspect-square  transition-all duration-200 borderDark border-opacity-0 group-hover:drop-shadow group-hover:border-opacity-10 ">
+          <img
+            className=" w-1/2 drop-shadow-xl transition-transform duration-200  group-hover:scale-105"
+            src="../../../public/assets/png/products/small.png"
+            alt="image"
+          />
         </div>
-      </div>
-    </>
+        <div>
+          <h3 className="font-[500]">Lampara de mesa</h3>
+          <h4 className="tracking-wide  text-[#6b7280]">$150</h4>
+        </div>
+      </article>
+      <article className=" mt-10  flex flex-col gap-5 max-w-xl group cursor-pointer ">
+        <div className="bg-bgLight rounded-lg grid place-items-center aspect-square  transition-all duration-200 borderDark border-opacity-0 group-hover:drop-shadow group-hover:border-opacity-10 ">
+          <img
+            className=" w-1/2 drop-shadow-xl transition-transform duration-200  group-hover:scale-105 "
+            src="../../../public/assets/png/products/medium.png"
+            alt="image"
+          />
+        </div>
+        <div>
+          <h3 className="font-[500]">Sofá</h3>
+          <h4 className="tracking-wide  text-[#6b7280]">$150</h4>
+        </div>
+      </article>
+      <article className=" mt-10  flex flex-col gap-5 max-w-xl group cursor-pointer ">
+        <div className="bg-bgLight rounded-lg grid place-items-center aspect-square  transition-all duration-200 borderDark border-opacity-0 group-hover:drop-shadow group-hover:border-opacity-10 ">
+          <img
+            className=" w-1/2 drop-shadow-xl transition-transform duration-200  group-hover:scale-105 "
+            src="../../../public/assets/png/products/big.png"
+            alt="image"
+          />
+        </div>
+        <div>
+          <h3 className="font-[500]">Guardarropa</h3>
+          <h4 className="tracking-wide  text-[#6b7280]">$150</h4>
+        </div>
+      </article>
+    </div>
   );
 }
