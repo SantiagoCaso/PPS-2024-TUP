@@ -14,9 +14,10 @@ module.exports = {
         primaryDark:"#111111",
         secondaryDark:"#191919",
         BgDark:"#040406",
+        bgLight:"#FAFAFA",
         light:"#FEFAE0"
       },screens: {
-        desktopSmall: '690px',
+        tablet: '500px',
 
       },
     },

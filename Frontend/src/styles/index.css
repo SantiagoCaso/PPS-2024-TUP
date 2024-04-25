@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer components {
+
+
+  /* SHARED */
+  body{
+    @apply font-montserrat
+  }
+  .borderLight {
+    @apply border-[1px] border-white border-opacity-20
+  }
+
+  .borderDark {
+    @apply border-[1px] border-black border-opacity-20
+  }
+
+  /* ICONS */
+
+  .icon {
+    @apply aspect-square cursor-pointer w-8
+  }
+
+  .nav-icon {
+    @apply w-8
+  }
+
+  /* NAV BAR */
+
+  .toggleButton {
+    @apply absolute z-[101] outline-none border-none bg-transparent top-7 right-5 select-none tablet:cursor-pointer;
+
+  }
+
+  .bar {
+    @apply h-[1.2px] transition-all duration-700 rounded-full z-10 w-full bg-light bg-opacity-90;
+  }
+}

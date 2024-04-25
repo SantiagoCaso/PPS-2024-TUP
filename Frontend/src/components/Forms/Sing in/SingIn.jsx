@@ -1,4 +1,4 @@
-import {Logo} from "../../icons/Logo";
+import { Logo } from "../../../icons/Logo";
 
 export const SingIn = () => {
   return (
@@ -85,4 +85,3 @@ export const SingIn = () => {
     </div>
   );
 };
-
