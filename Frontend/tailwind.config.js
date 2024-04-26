@@ -15,10 +15,10 @@ module.exports = {
         secondaryDark:"#191919",
         BgDark:"#040406",
         bgLight:"#FAFAFA",
-        light:"#FEFAE0"
+        light:"#FEFAE0",
+        brown:"#AE8C7E"
       },screens: {
-        tablet: '500px',
-
+        tablet: '500px'
       },
     },
   },
