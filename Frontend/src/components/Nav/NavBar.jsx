@@ -9,15 +9,15 @@ import { User } from "./../../icons/User";
 export const NavBar = () => {
   return (
     <NavProvider>
-      <nav className="bg-BgDark text-light overflow-hidden px-4">
-        <div className="flex h-16  justify-between items-center leading-[64px]  overflow-hidden ">
+      <nav className="bg-BgDark text-light  px-4 lg:px-7 xl:mb-10 ">
+        <div className="flex h-16  justify-between items-center leading-[64px]  ">
           <NavLink to="/">
-            <Logo customStyle="w-10  " />
+            <Logo customStyle="w-10 " />
           </NavLink>
-          <div className="w-full flex gap-5 items-center justify-end  overflow-hidden relative xl:gap-7">
+          <div className="w-full flex gap-5 items-center justify-end relative xl:gap-7 ">
             <Menu />
             <Cart />
-            <User />
+            <User customStyle="hidden sm:bock" />
             <ToggleButton />
           </div>
         </div>

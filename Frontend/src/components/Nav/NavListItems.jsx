@@ -8,19 +8,22 @@ export const NavListItems = () => {
   const { ProductCategories, setShowMenu } = useContext(NavContext);
   const Icons = [CategorySmall, CategoryMedium, CategoryBig];
   return (
-    <ul className=" space-y-16 sm:flex sm:flex-row sm:space-y-0 sm:gap-5 sm:w-1/2 sm:justify-evenly  ">
-      {ProductCategories.map((category, i) => {
+    <ul className=" space-y-10 sm:flex sm:flex-row sm:space-y-0 sm:gap-3  sm:w-1/2  sm:justify-evenly  ">
+      {ProductCategories.map((category,i ) => {
         const Icon = Icons[i];
         return (
-          <li className="" key={category}>
+          <li className="" key={i}>
             <NavLink
-              to={`/categories/${category}`}
-              className="capitalize tracking-wide  flex gap-3  "
+              to={`/categories/${category.route}`}
+              className="capitalize tracking-wide  flex gap-3 text-sm lg:text-base"
               key={category}
               onClick={() => setShowMenu(false)}
             >
               {Icon && <Icon customStyle="w-7 sm:hidden " />}
-              <span className="sm:hidden">Muebles {category}</span>
+              <div>
+                <span className="sm:hidden">Muebles </span>
+                {category.name}
+              </div>
             </NavLink>
           </li>
         );

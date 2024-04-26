@@ -2,16 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
 
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+}
 
 
 @layer components {
 
 
   /* SHARED */
-  body{
+  body {
     @apply font-montserrat
   }
+
   .borderLight {
     @apply border-[1px] border-white border-opacity-20
   }
@@ -20,6 +33,16 @@
     @apply border-[1px] border-black border-opacity-20
   }
 
+  .customPadding {
+    @apply px-4 sm:p-8
+  }
+  .customWidth{
+    @apply max-w-[1280px] mx-auto
+  }
+
+  .cardBgLight{
+    @apply bg-bgLight rounded-lg
+  }
   /* ICONS */
 
   .icon {
@@ -27,17 +50,8 @@
   }
 
   .nav-icon {
-    @apply w-8
+    @apply w-8 
   }
 
-  /* NAV BAR */
-
-  .toggleButton {
-    @apply absolute z-[101] outline-none border-none bg-transparent top-7 right-5 select-none tablet:cursor-pointer;
-
-  }
-
-  .bar {
-    @apply h-[1.2px] transition-all duration-700 rounded-full z-10 w-full bg-light bg-opacity-90;
-  }
+ 
 }
