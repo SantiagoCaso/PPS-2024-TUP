@@ -1,7 +1,7 @@
 import { HeroSection } from "../components/Home/Hero/HeroSection";
 import { CategoriesList } from "../components/Products/CategoriesList";
 
-export const Home = () => {
+export const HomePage = () => {
   return (
     <main className="customWidth  flex flex-col gap-16 mx-auto items-center mb-16  ">
       <HeroSection />
