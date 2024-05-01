@@ -22,7 +22,7 @@ const routes = [
         index: true,
       },
       {
-        path: "/product",
+        path: "/product/:productId",
         element: <ProductOverview />,
       },
       {

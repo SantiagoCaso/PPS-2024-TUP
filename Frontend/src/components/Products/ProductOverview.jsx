@@ -1,5 +1,20 @@
+import { useEffect, useState } from "react";
 import { GoBackButton } from "./../shared/GoBackButton";
+import { GetProductById } from "../../services/productServices";
+import { Loader } from "../shared/Loader";
+import { useParams } from "react-router-dom";
+
 export const ProductOverview = () => {
+  const [data, setData] = useState(null);
+  const { productId } = useParams();
+  useEffect(() => {
+    GetProductById(productId).then((res) => {
+      setData(res.data);
+    });
+  }, []);
+  if (data == null) {
+    return <Loader />;
+  }
   return (
     <section className="">
       <GoBackButton />
@@ -14,10 +29,12 @@ export const ProductOverview = () => {
         </div>
 
         <div className="flex flex-col gap-3 md:w-1/2">
-          <h2 className="font-bold text-4xl text-brown ">Sillon Mediano</h2>
-          <span className="text-2xl font-[400] ">$140</span>
-          <p className="font-[400] ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod atque provident alias! Officiis ex autem quasi vitae quod? Saepe, error laboriosam rerum mollitia eos sequi ad quam ipsum atque ratione.</p>
-          <button className="bg-secondaryDark text-brown font-semibold tracking-wide rounded-md py-3 w-fit px-5 hover:bg-primaryDark ">Agregar al carrito</button>
+          <h2 className="font-bold text-4xl text-brown ">{data.name}</h2>
+          <span className="text-2xl font-[400] ">${data.price}</span>
+          <p className="font-[400] ">{data.description}</p>
+          <button className="bg-secondaryDark text-brown font-semibold tracking-wide rounded-md py-3 w-fit px-5 hover:bg-primaryDark ">
+            Agregar al carrito
+          </button>
         </div>
       </article>
     </section>
