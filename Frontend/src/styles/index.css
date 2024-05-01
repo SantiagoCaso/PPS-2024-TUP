@@ -22,7 +22,7 @@
 
   /* SHARED */
   body {
-    @apply font-montserrat
+    @apply font-montserrat text-secondaryDark
   }
 
   .borderLight {

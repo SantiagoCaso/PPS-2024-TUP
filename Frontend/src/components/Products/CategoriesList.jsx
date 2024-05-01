@@ -17,7 +17,8 @@ export const CategoriesList = () => {
               key={category.name}
               src={category.src}
               text={category.name}
-              route={category.route}
+              // route={category.route}
+              route={'/product'}
             />
           );
         })}

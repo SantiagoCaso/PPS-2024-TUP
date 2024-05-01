@@ -3,7 +3,7 @@ import { GoBackButton } from './../shared/GoBackButton';
 
 export const ProductList = () => {
   return (
-    <section>
+    <section className="">
       <GoBackButton />
       <ProductCard />
     </section>

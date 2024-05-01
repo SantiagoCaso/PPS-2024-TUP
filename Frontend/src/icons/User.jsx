@@ -1,6 +1,9 @@
+import { NavLink } from "react-router-dom";
+
 export const User = ({customStyle}) => {
   return (
-    <svg
+    <NavLink to={'/profile'}>
+      <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       className={`icon  sm:block ${customStyle}`}
@@ -18,5 +21,6 @@ export const User = ({customStyle}) => {
         strokeWidth="1"
       />
     </svg>
+    </NavLink>
   );
 };
