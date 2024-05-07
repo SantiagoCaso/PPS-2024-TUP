@@ -9,6 +9,7 @@ import { ProductList } from "../components/Products/ProductList";
 import { CartPage } from "./../pages/CartPage";
 import { HomePage } from "./../pages/HomePage";
 import { ProductOverview } from "../components/Products/ProductOverview";
+import UpdateProfile from "../components/User/Admin/UpdateProfile";
 
 const routes = [
   {
@@ -34,8 +35,12 @@ const routes = [
         element: <ProductList />,
       },
       {
-        path: "/profile",
+        path: "/profile/:userId",
         element: <Profile />,
+      },
+      {
+        path: "/updateprofile",
+        element: <UpdateProfile />,
       },
       {
         path: "/cart",
