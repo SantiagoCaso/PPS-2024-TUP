@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { GetUserById } from "../../services/productServices";
 import { useParams } from "react-router-dom";
 import { Loader } from "../shared/Loader";
+import {GetUserById} from '../../services/user/userService'
 
 export const Profile = () => {
   const [data, setData] = useState(null);
@@ -11,14 +11,14 @@ export const Profile = () => {
     GetUserById(userId).then((res) => {
       setData(res.data);
     });
-  }, []);
+  }, [userId]);
   if (data == null) {
     return <Loader />;
   }
   return (
     <div className="space-y-12 border-4 border-black border-solid p-[10px] rounded-lg m-5 h-full ">
       <div className="px-4 sm:px-0">
-        <h3 className="text-base font-semibold leading-7 text-gray-900 text-xl">
+        <h3 className="text-base font-semibold leading-7 text-gray-900 ">
           Perfil
         </h3>
         <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
