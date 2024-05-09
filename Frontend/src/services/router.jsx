@@ -3,13 +3,13 @@ import App from "../App";
 import { NotFound } from "../components/shared/NotFound";
 import { Profile } from "../components/User/Profile";
 import { SingIn } from "../components/Forms/Sing in/SingIn";
-import { Loader } from "../components/shared/Loader";
 import { CategoriesList } from "../components/Products/CategoriesList";
 import { ProductList } from "../components/Products/ProductList";
 import { CartPage } from "./../pages/CartPage";
 import { HomePage } from "./../pages/HomePage";
 import { ProductOverview } from "../components/Products/ProductOverview";
 import UpdateProfile from "../components/User/Admin/UpdateProfile";
+import { Register } from "./../components/Forms/Register/Register";
 
 const routes = [
   {
@@ -39,7 +39,7 @@ const routes = [
         element: <Profile />,
       },
       {
-        path: "/updateprofile",
+        path: "/update-profile",
         element: <UpdateProfile />,
       },
       {
@@ -54,11 +54,7 @@ const routes = [
   },
   {
     path: "/register",
-    element: <Profile />,
-  },
-  {
-    path: "/products/:productId",
-    element: <Loader />,
+    element: <Register />,
   },
 ];
 
