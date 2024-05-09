@@ -49,7 +49,7 @@ export const Profile = () => {
     GetUserById(userId).then((res) => {
       setData(res.data);
     });
-  }, []);
+  }, [userId]);
   if (data == null) {
     return <Loader />;
   }

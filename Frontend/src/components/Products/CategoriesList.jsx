@@ -1,4 +1,4 @@
-import { CategoriesData } from "../../services/CategoriesData";
+import { CategoriesData } from "../../services/category/CategoriesData";
 import { CategoryCard } from "./CategoryCard";
 import { Subtitle } from "./../shared/Subtitle";
 
@@ -18,7 +18,7 @@ export const CategoriesList = () => {
               src={category.src}
               text={category.name}
               // route={category.route}
-              route={'/product'}
+              route={'/categories/'+ category.id}
             />
           );
         })}
