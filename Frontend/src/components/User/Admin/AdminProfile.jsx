@@ -1,4 +1,5 @@
 import OrdersList from "../../Orders/OrdersLists/OrdersList";
+import { AddProduct } from "../../Products/FormAddProduct";
 
 const AdminProfile = () => {
   return (
@@ -37,6 +38,7 @@ const AdminProfile = () => {
         <h3 className="text-base font-semibold leading-7 text-gray-900">
           Agregar productos
         </h3>
+        <AddProduct />
       </div>
       <div className="space-y-12 border-b border-black border-solid">
         <h3 className="text-base font-semibold leading-7 text-gray-900">
