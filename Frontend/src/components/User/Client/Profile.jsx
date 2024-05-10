@@ -6,7 +6,7 @@ import {
 import { useParams } from "react-router-dom";
 import { Loader } from "../../shared/Loader";
 import { Toaster, toast } from "sonner";
-import ClientOrdersList from "./ClientOrdersList";
+import ClientOrdersList from "../../Orders/OrdersLists/ClientOrdersList";
 
 export const Profile = () => {
   const [data, setData] = useState(null);

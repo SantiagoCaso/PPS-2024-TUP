@@ -1,23 +1,20 @@
-//esto es solo una plantilla para hacer la lista o historial de ordenes del cliente
-// HAY QUE HACER UN SERVICIO PARA TRAER LAS ORDENES POR SU ID DE USUARIO (el usuario que realizo esas ordenes)
-// AUTORIZAR EL SERVICIO DESDE EL BACK PARA CLIENTES PUEDAN VER SUS PRDENES
-// import { useEffect, useState } from "react";
-// import { GetOrderByUserId } from "../../../services/order/orderService";
+// 401 necesitamos el token de autorización para ver todos los productos
 
-const orders = [
-  { Id: 1, UserId: 123 },
-  { Id: 2, UserId: 321 },
-  { Id: 3, UserId: 322 },
-];
+import { useEffect, useState } from "react";
+import { Loader } from "../../shared/Loader";
+import { GetOrderByUserId } from "../../../services/order/orderService";
 
 export default function ClientOrdersList() {
-  //   const [orders, setOrders] = useState();
+  const [orders, setOrders] = useState();
 
-  //   useEffect(() => {
-  //     GetOrderByUserId().then((res) => {
-  //       setOrders(res.data);
-  //     });
-  //   }, []);
+  useEffect(() => {
+    GetOrderByUserId().then((res) => {
+      setOrders(res.data);
+    });
+  }, []);
+  if (orders == null) {
+    return <Loader />;
+  }
 
   return (
     <ul role="list" className="divide-y divide-gray-600">

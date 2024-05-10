@@ -9,6 +9,7 @@ import { CartPage } from "./../pages/CartPage";
 import { HomePage } from "./../pages/HomePage";
 import { ProductOverview } from "../components/Products/ProductOverview";
 import { Register } from "./../components/Forms/Register/Register";
+import AdminProfile from "../components/User/Admin/AdminProfile";
 
 const routes = [
   {
@@ -37,7 +38,10 @@ const routes = [
         path: "/profile/:userId",
         element: <Profile />,
       },
-
+      {
+        path: "/profile/admin",
+        element: <AdminProfile />,
+      },
       {
         path: "/cart",
         element: <CartPage />,
