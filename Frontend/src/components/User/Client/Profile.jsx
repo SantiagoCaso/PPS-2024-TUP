@@ -1,15 +1,19 @@
 import { useEffect, useRef, useState } from "react";
-import { GetUserById } from "../../services/productServices";
+import {
+  GetUserById,
+  UpdateUsername,
+} from "../../../services/user/userService";
 import { useParams } from "react-router-dom";
-import { Loader } from "../shared/Loader";
+import { Loader } from "../../shared/Loader";
 import { Toaster, toast } from "sonner";
+import ClientOrdersList from "./ClientOrdersList";
 
 export const Profile = () => {
   const [data, setData] = useState(null);
+  const [newName, setNewName] = useState();
   const { userId } = useParams();
   const [isEditing, setIsEditing] = useState(false);
   const focusName = useRef(null);
-  const focusEmail = useRef(null);
 
   const handleEdit = (e) => {
     e.preventDefault();
@@ -18,28 +22,33 @@ export const Profile = () => {
     focusName.current.focus();
     focusName.current.style.border = "solid black";
     focusName.current.style.borderRadius = "5px";
-    focusEmail.current.focus();
-    focusEmail.current.style.border = "solid black";
-    focusEmail.current.style.borderRadius = "5px";
   };
 
   const handleSave = (e) => {
     e.preventDefault();
     setIsEditing(false);
     console.log(isEditing);
-    focusEmail.current.blur();
-    focusEmail.current.style.border = "none";
     focusName.current.blur();
     focusName.current.style.border = "none";
-    toast.success("Los datos han sido actualizados");
+    //NECESITA AUTORIZACIÓN
+    //HAY QUE PASAR EL TOKEN AL BACK PARA PODER REALIZAR EL SERVICIO
+
+    UpdateUsername(userId, newName)
+      .then((res) => {
+        console.log("Nombre del usuairo actualizado:" + res.data.name);
+        toast.success("El nombre de usuario a sido actualizado");
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Hubo un error al actualizar el nombre");
+      });
   };
 
   const handleCancel = (e) => {
     e.preventDefault();
     setIsEditing(false);
     console.log(isEditing);
-    focusEmail.current.blur();
-    focusEmail.current.style.border = "none";
+
     focusName.current.blur();
     focusName.current.style.border = "none";
     toast.info("Los cambios an sido cancelados");
@@ -62,14 +71,15 @@ export const Profile = () => {
           type="text"
           name="nombre"
           defaultValue={data.username}
+          value={newName}
           ref={focusName}
+          onChange={(e) => setNewName(e.target.value)}
         />
         <input
-          disabled={!isEditing}
+          disabled
           className="mt-1 text-xl leading-6 text-gray-700 sm:col-span-2 sm:mt-0 m-1"
           type="email"
           defaultValue={data.email}
-          ref={focusEmail}
         />
         <div className="grid grid-flow-row grid-cols-4">
           {isEditing ? (
@@ -100,6 +110,8 @@ export const Profile = () => {
           )}
         </div>
       </form>
+      <p>Sección historial de compras o todas las orders</p>
+      <ClientOrdersList />
       <Toaster richColors position="top-center" />
     </>
   );

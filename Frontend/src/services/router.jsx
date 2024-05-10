@@ -1,14 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import { NotFound } from "../components/shared/NotFound";
-import { Profile } from "../components/User/Profile";
+import { Profile } from "../components/User/Client/Profile";
 import { SingIn } from "../components/Forms/Sing in/SingIn";
 import { CategoriesList } from "../components/Products/CategoriesList";
 import { ProductList } from "../components/Products/ProductList";
 import { CartPage } from "./../pages/CartPage";
 import { HomePage } from "./../pages/HomePage";
 import { ProductOverview } from "../components/Products/ProductOverview";
-import UpdateProfile from "../components/User/Admin/UpdateProfile";
 import { Register } from "./../components/Forms/Register/Register";
 
 const routes = [
@@ -38,10 +37,7 @@ const routes = [
         path: "/profile/:userId",
         element: <Profile />,
       },
-      {
-        path: "/update-profile",
-        element: <UpdateProfile />,
-      },
+
       {
         path: "/cart",
         element: <CartPage />,
