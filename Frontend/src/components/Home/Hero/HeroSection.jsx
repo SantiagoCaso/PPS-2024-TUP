@@ -2,7 +2,7 @@ export const HeroSection = () => {
   return (
     <section className=" relative flex  justify-center px-0 w-screen xl:w-full ">
       <img
-        className=" overflow-hidden xl:rounded-3xl xl:h-[calc(100vh-150px)] xl:mb-11 2xl:w-screen  "
+        className=" overflow-hidden xl:rounded-3xl xl:h-[calc(100vh-200px)] xl:mb-11 2xl:w-screen  "
         src="../../../../public/assets/png/products/hero-img.webp"
         alt=""
       />
