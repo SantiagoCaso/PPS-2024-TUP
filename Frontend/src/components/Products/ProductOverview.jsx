@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { GoBackButton } from "./../shared/GoBackButton";
 import { Loader } from "../shared/Loader";
 import { useParams } from "react-router-dom";
-import {GetProductById} from '../../services/product/productService'
+import { GetProductById } from "../../services/product/productService";
 export const ProductOverview = () => {
   const [data, setData] = useState(null);
   const { productId } = useParams();

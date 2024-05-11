@@ -3,8 +3,6 @@ import React from "react";
 import "./styles/index.css";
 import "./styles/nav.css";
 import "./styles/products.css";
-//Ver todos los templates de tailwind, da igual si son pagos
-//Filtar googles images por color transparente para los pngs
 import { RouterProvider } from "react-router-dom";
 import { router } from "./services/router";
 
