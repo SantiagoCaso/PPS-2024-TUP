@@ -16,6 +16,9 @@ export const Profile = () => {
 
   if (!data) {
     return <Loader />;
+
+
+    
   }
   return (
     <div className="space-y-12 border-4 border-black border-solid p-[10px] rounded-lg m-5 h-full ">

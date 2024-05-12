@@ -9,7 +9,7 @@ import { AuthContext } from '../../../context/Auth/AuthContext';
 import { useContext } from 'react';
 export const SignInForm = () => {
   const navigate = useNavigate();
-  const { saveToken } = useContext(AuthContext);
+  const { saveUserToken } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -22,10 +22,11 @@ export const SignInForm = () => {
   const onSubmit = (userData) => {
     SignInUser(userData.email, userData.password)
       .then((AuthResponse) => {
-        saveToken(AuthResponse.data);
+        saveUserToken(AuthResponse.data);
         navigate('/');
       })
       .catch((err) => {
+        //Agregar etiqueta de error en el front
         console.log('Error Iniciar sesion ' + err);
       });
   };

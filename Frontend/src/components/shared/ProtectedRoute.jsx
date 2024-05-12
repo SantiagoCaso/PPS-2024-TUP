@@ -3,7 +3,7 @@ import { AuthContext } from '../../context/Auth/AuthContext';
 import { Navigate, Outlet } from 'react-router-dom';
 
 export const ProtectedRoute = ({route}) => {
-  const { token } = useContext(AuthContext);
+  const { isAuthenticated } = useContext(AuthContext);
 
-  return token ? <Outlet /> : <Navigate to={route} />;
+  return isAuthenticated ? <Outlet /> : <Navigate to={route} />;
 };

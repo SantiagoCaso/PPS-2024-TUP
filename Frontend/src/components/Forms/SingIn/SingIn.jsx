@@ -7,9 +7,9 @@ import { AuthContext } from "../../../context/Auth/AuthContext";
 import { Navigate } from "react-router-dom";
 
 export const SignIn = () => {
-  const { token } = useContext(AuthContext);
+  const { isAuthenticated } = useContext(AuthContext);
 
-  if(token){
+  if(isAuthenticated){
     return <Navigate to={'/'}/>
   }
 
