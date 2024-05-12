@@ -1,16 +1,15 @@
-import { useForm } from "react-hook-form";
-import { signInScheme } from "../../../services/validator/singInScheme";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { Input } from "../Input";
-import { InputPassword } from "../InputPassword";
-import {SignInUser} from '../../../services/user/userService'
-import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../../context/Auth/AuthContext";
-import { useContext } from "react";
+import { useForm } from 'react-hook-form';
+import { signInScheme } from '../../../services/validator/singInScheme';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Input } from '../Input';
+import { InputPassword } from '../InputPassword';
+import { SignInUser } from '../../../services/user/userService';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../context/Auth/AuthContext';
+import { useContext } from 'react';
 export const SignInForm = () => {
-
-  const navigate = useNavigate()
-  const {saveToken} = useContext(AuthContext)
+  const navigate = useNavigate();
+  const { saveUserToken } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -20,14 +19,15 @@ export const SignInForm = () => {
   });
   // Password = "has3vgHdhDfbsSajsd",
   // Email = "usuario1@gmail.com",
-  const onSubmit = (data) => {
-    SignInUser(data.email, data.password)
-      .then((res) => {
-        saveToken(res.data)
-        navigate('/')
+  const onSubmit = (userData) => {
+    SignInUser(userData.email, userData.password)
+      .then((AuthResponse) => {
+        saveUserToken(AuthResponse.data);
+        navigate('/');
       })
       .catch((err) => {
-        console.log("Error Iniciar sesion " + err);
+        //Agregar etiqueta de error en el front
+        console.log('Error Iniciar sesion ' + err);
       });
   };
   return (
@@ -37,16 +37,16 @@ export const SignInForm = () => {
     >
       <Input
         errors={errors.email}
-        name={"email"}
-        label={"Correo electronico"}
-        placeholder={"pedro@gmail.com"}
+        name={'email'}
+        label={'Correo electronico'}
+        placeholder={'pedro@gmail.com'}
         register={register}
       />
       <InputPassword
         errors={errors.password}
-        label={"Contraseña"}
-        name={"password"}
-        placeholder={"******"}
+        label={'Contraseña'}
+        name={'password'}
+        placeholder={'******'}
         register={register}
       />
 
