@@ -8,8 +8,8 @@ import { ProductList } from "../components/Products/ProductList";
 import { CartPage } from "./../pages/CartPage";
 import { HomePage } from "./../pages/HomePage";
 import { ProductOverview } from "../components/Products/ProductOverview";
-import UpdateProfile from "../components/User/Admin/UpdateProfile";
 import { Register } from "./../components/Forms/Register/Register";
+import AdminProfile from "../components/User/Admin/AdminProfile";
 
 const routes = [
   {
@@ -39,8 +39,8 @@ const routes = [
         element: <Profile />,
       },
       {
-        path: "/update-profile",
-        element: <UpdateProfile />,
+        path: "/profile/admin",
+        element: <AdminProfile />,
       },
       {
         path: "/cart",

@@ -1,22 +1,21 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Loader } from "../shared/Loader";
 import { GetUserById } from "../../services/user/userService";
 import { AuthContext } from "../../context/Auth/AuthContext";
-import { useRedirect } from "../../hooks/useRedirect";
+
 
 export const Profile = () => {
   const [data, setData] = useState(null);
   const { userId } = useParams();
   const {token} = useContext(AuthContext);
-  const redirecTo = useRedirect();
+  const navigate = useNavigate();
   useEffect(() => {
     GetUserById(userId).then((res) => {
       setData(res.data);
     });
-    console.log(token);
     if (!token) {
-      redirecTo("/signin");
+      navigate("/signin");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId]);
