@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import { NotFound } from "../components/shared/NotFound";
-import { Profile } from "../components/User/Profile";
-import { SignIn } from "../components/Forms/Sing in/SingIn";
+import { Profile } from "../components/User/Client/Profile";
+import { SignIn } from "../components/Forms/SingIn/SingIn";
 import { CategoriesList } from "../components/Products/CategoriesList";
 import { ProductList } from "../components/Products/ProductList";
 import { CartPage } from "./../pages/CartPage";
