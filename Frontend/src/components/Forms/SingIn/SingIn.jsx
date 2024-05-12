@@ -2,19 +2,16 @@
 import { FormHeader } from "../FormHeader";
 import { FormFooter } from "../FormFooter";
 import { SignInForm } from "./SignInForm";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../../../context/Auth/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 export const SignIn = () => {
   const { token } = useContext(AuthContext);
 
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (token) {
-      navigate("/");
-    }
-  }, []);
+  if(token){
+    return <Navigate to={'/'}/>
+  }
 
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
