@@ -1,9 +1,8 @@
 export default function OrderDetail({ name, price, quantity }) {
   return (
     <ul role="list" className="divide-y divide-y-reverse divide-gray-200">
-      <h5 className="pt-4">Detalles de productos</h5>
-      <li className="flex justify-start gap-x-6 py-3">
-        <div className="flex justify-start  min-w-0 gap-x-4">
+      <li className="flex justify-start gap-x-6 pb-2 divide-y  divide-gray-600">
+        <div className="flex justify-start  min-w-0 gap-x-4 ">
           <div className="min-w-0 flex-auto">
             <p className="text-sm font-semibold leading-6 text-gray-900">
               Producto
