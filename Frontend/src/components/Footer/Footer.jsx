@@ -4,7 +4,9 @@ const Footer = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
         <div className="flex flex-col flex-shrink-0">
           <p className="text-sm leading-none  mt-4">Copyright © 2024 Luxe</p>
-          <p className="text-sm leading-none  mt-4">All rights reserved</p>
+          <p className="text-sm leading-none  mt-4">
+            Todos los derechos reservados
+          </p>
           <div className="flex items-center gap-x-4 mt-12">
             <div className="opacity-50 w-8 h-8 flex-shrink-0 bg-gray-800 cursor-pointer hover:bg-gray-700 rounded-full flex items-center justify-center">
               <svg
@@ -41,14 +43,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="sm:ml-0 ml-8">
-          <h2 className="text-base font-semibold leading-4 ">Company</h2>
+          <h2 className="text-base font-semibold leading-4 ">Copañía</h2>
           <p className="hover:text-gray-500 text-base leading-4 mt-6  cursor-pointer">
-            {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
-            About Us
-            {/* </a> */}
+            <a href="/aboutus" target="_blank" rel="noopener noreferrer">
+              Conocenos
+            </a>
           </p>
           <p className="hover:text-gray-500 text-base leading-4 mt-6  cursor-pointer">
-            Contact us
+            Contactanos
           </p>
         </div>
         <div>
