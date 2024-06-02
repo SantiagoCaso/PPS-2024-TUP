@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 export const CartPage = () => {
   const [show, setShow] = useState(false);
   return (
@@ -23,7 +23,7 @@ export const CartPage = () => {
               <div className="w-1/4">
                 <img
                   src="https://cdn.tuk.dev/assets/templates/e-commerce-kit/bestSeller3.png"
-                  alt
+                
                   className="w-full h-full object-center object-cover"
                 />
               </div>

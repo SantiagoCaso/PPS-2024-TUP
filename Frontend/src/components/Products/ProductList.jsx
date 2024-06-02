@@ -1,15 +1,16 @@
-import { ProductCard } from "./ProductCard";
-import { GoBackButton } from "./../shared/GoBackButton";
-import { useEffect, useState } from "react";
-import { GetAllProducts } from "../../services/product/productService";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { ProductCard } from './ProductCard';
+import { GoBackButton } from './../shared/GoBackButton';
+import { useParams } from 'react-router-dom';
+import { Loader } from '../shared/Loader';
+import { useProducts } from '../../hooks/useProducts';
+import { Error } from '../shared/Error';
 export const ProductList = () => {
-  const [allProducts, setAllProducts] = useState();
+  const { categoryId } = useParams();
+  const { allProducts, loading, error } = useProducts(categoryId);
 
-  useEffect(() => {
-    GetAllProducts().then((res) => {
-      setAllProducts(res.data);
-    });
-  }, []);
+  if (loading) return <Loader />;
+  if (error) return <Error/>;
 
   return (
     <section className="">
@@ -21,7 +22,7 @@ export const ProductList = () => {
             title={product.name}
             price={product.price}
             stock={product.available}
-             productId={product.id}
+            productId={product.id}
           />
         ))}
       </div>

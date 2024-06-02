@@ -40,7 +40,7 @@ const routes = [
         element: <ProtectedRoute route="/signin" />,
         children: [
           {
-            path: '/profile/:userId',
+            path: '/profile',
             element: <Profile />,
           },
         ],

@@ -7,7 +7,7 @@ function App() {
     
       <div className="overflow-hidden ">
         <NavBar />
-        <div className="customWidth min-h-screen customPadding">
+        <div className="customWidth min-h-[calc(100vh-64px)] customPadding ">
           <Outlet />
         </div>
         <Footer />
