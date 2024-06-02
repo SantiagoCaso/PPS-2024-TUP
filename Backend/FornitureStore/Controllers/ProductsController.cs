@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FornitureStore.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productService;
@@ -22,26 +22,50 @@ namespace FornitureStore.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllProducts()
         {
-            var products = await _productService.GetAllProductsAsync();
-            return Ok(products);
+            try
+            {
+                var products = await _productService.GetAllProductsAsync();
+                return Ok(products);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener todos los productos.");
+                return StatusCode(500, "Internal server error");
+            }
         }
 
-        [HttpGet("{id}", Name = "GetProductById")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
-            var product = await _productService.GetProductByIdAsync(id);
-            if (product == null)
+            try
             {
-                return NotFound();
+                var product = await _productService.GetProductByIdAsync(id);
+                if (product == null)
+                {
+                    return NotFound();
+                }
+                return Ok(product);
             }
-            return Ok(product);
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener el producto con ID {Id}.", id);
+                return StatusCode(500, "Internal server error");
+            }
         }
 
         [HttpGet("category/{categoryId}")]
         public async Task<IActionResult> GetProductsByCategoryId(int categoryId)
         {
-            var products = await _productService.GetProductsByCategoryIdAsync(categoryId);
-            return Ok(products);
+            try
+            {
+                var products = await _productService.GetProductsByCategoryIdAsync(categoryId);
+                return Ok(products);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener los productos de la categoría con ID {CategoryId}.", categoryId);
+                return StatusCode(500, "Internal server error");
+            }
         }
 
         [HttpPost]
@@ -55,19 +79,18 @@ namespace FornitureStore.Controllers
 
             try
             {
-                bool productIsCreated = await _productService.AddProductAsync(productDto);
-
-                if (!productIsCreated)
+                bool productCreated = await _productService.AddProductAsync(productDto);
+                if (!productCreated)
                 {
-                    return BadRequest("Hubo un error al crear el producto, intente nuevamente");
+                    return BadRequest("No se pudo crear el producto. Verifique si ya existe uno con el mismo nombre o ImageId.");
                 }
 
                 return Ok($"Producto {productDto.ProductName} creado correctamente");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Hubo un problema al crear el Producto con los datos: {@ProductDto}", productDto);
-                return StatusCode(500);
+                _logger.LogError(ex, "Error al crear el producto.");
+                return StatusCode(500, "Internal server error");
             }
         }
 
@@ -80,28 +103,42 @@ namespace FornitureStore.Controllers
                 return BadRequest(ModelState);
             }
 
-            var result = await _productService.UpdateProductAsync(productDto);
-
-            if (!result)
+            try
             {
-                return StatusCode(500, "Internal server error. Could not update product.");
-            }
+                bool productUpdated = await _productService.UpdateProductAsync(productDto);
+                if (!productUpdated)
+                {
+                    return BadRequest("No se pudo actualizar el producto. Verifique si ya existe otro con el mismo nombre o ImageId.");
+                }
 
-            return NoContent();
+                return Ok($"Producto {productDto.ProductName} actualizado correctamente");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al actualizar el producto.");
+                return StatusCode(500, "Internal server error");
+            }
         }
 
         [HttpDelete("{id}")]
         [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
-            var result = await _productService.DeleteProductAsync(id);
-
-            if (!result)
+            try
             {
-                return NotFound();
-            }
+                bool productDeleted = await _productService.DeleteProductAsync(id);
+                if (!productDeleted)
+                {
+                    return NotFound();
+                }
 
-            return NoContent();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al eliminar el producto.");
+                return StatusCode(500, "Internal server error");
+            }
         }
     }
 }
