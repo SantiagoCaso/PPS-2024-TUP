@@ -1804,11 +1804,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Backend\\FornitureStore\\FornitureStore.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\PPS-2024-TUP\\Backend\\FornitureStore\\FornitureStore.csproj",
       "projectName": "FornitureStore",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\Backend\\FornitureStore\\FornitureStore.csproj",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\PPS-2024-TUP\\Backend\\FornitureStore\\FornitureStore.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\Backend\\FornitureStore\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\Desktop\\PPS-2024-TUP\\Backend\\FornitureStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",

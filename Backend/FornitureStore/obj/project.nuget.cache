@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IxwxV19+gQSZaLcnwvjQH2tSyKpvB8c/eddYVKIIFSmy8LChWGcKV1G1nYuCLmIiqIGI/wBfMKbRgAEayvrdIg==",
+  "dgSpecHash": "eJkM6g1SSyHMLvwc/nRezZhjufj/SsFZEgvUWYAsfhao1QQ7sXF4HO1JzfnJlMvu1fF8VilclHPn3MUlX+MKVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\Backend\\FornitureStore\\FornitureStore.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\PPS-2024-TUP\\Backend\\FornitureStore\\FornitureStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.30\\microsoft.aspnetcore.authentication.jwtbearer.6.0.30.nupkg.sha512",
