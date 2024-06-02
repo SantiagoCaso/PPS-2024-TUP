@@ -3,10 +3,11 @@ import { signInScheme } from '../../../services/validator/singInScheme';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Input } from '../Input';
 import { InputPassword } from '../InputPassword';
-import { SignInUser } from '../../../services/user/userService';
+
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/Auth/AuthContext';
 import { useContext } from 'react';
+import { SignInUser } from '../../../services/implementations/user/userService';
 export const SignInForm = () => {
   const navigate = useNavigate();
   const { saveUserToken } = useContext(AuthContext);

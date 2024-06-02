@@ -8,7 +8,7 @@ import { Loader } from "../../shared/Loader";
 import { Toaster, toast } from "sonner";
 import ClientOrdersList from "../../Orders/OrdersLists/ClientOrdersList";
 
-export const Profile = () => {
+export const ProfileTest = () => {
   const [data, setData] = useState(null);
   const [newName, setNewName] = useState();
   const { userId } = useParams();

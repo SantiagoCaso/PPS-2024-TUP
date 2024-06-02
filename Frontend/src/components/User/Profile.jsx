@@ -1,57 +1,67 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useContext, useEffect, useState } from 'react';
 import { Loader } from '../shared/Loader';
-import { GetUserById } from '../../services/user/userService';
+import { AuthContext } from '../../context/Auth/AuthContext';
+import { GetUserProfile } from '../../services/implementations/user/userService';
 
 export const Profile = () => {
   const [data, setData] = useState(null);
-  const { userId } = useParams();
+  const { token, verifyUserSession } = useContext(AuthContext);
 
   useEffect(() => {
-    GetUserById(userId).then((res) => {
-      setData(res.data);
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [userId]);
+    const fetchData = async () => {
+      try {
+        await verifyUserSession(); // Asegúrate de que verifyUserSession sea una función asincrónica si es asíncrona
+        const response = await GetUserProfile(token);
+        setData(response.data);
+        console.log('Info perfil: ', response.data);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      }
+    };
+    if (token) {
+      fetchData();
+    }
+  }, []);
 
   if (!data) {
     return <Loader />;
-
-
-    
   }
   return (
-    <div className="space-y-12 border-4 border-black border-solid p-[10px] rounded-lg m-5 h-full ">
+    <div className=" rounded-xl p-3 customShadow">
       <div className="px-4 sm:px-0">
-        <h3 className="text-base font-semibold leading-7 text-gray-900 ">
-          Perfil
+        <h3 className="text-base font-semibold leading-7 text-gray-900">
+          Información de la cuenta
         </h3>
         <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
-          Información personal
+          Información personal y detalles de compras
         </p>
       </div>
       <div className="mt-6 border-t border-gray-100">
         <dl className="divide-y divide-gray-100">
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">
-              Nombre Completo
+              Nombre de usuario
             </dt>
-            <dd className="mt-1 text-xl leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              {data.username}
+            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+              {data.userName}
             </dd>
-            <input
-              className="mt-1 text-xl leading-6 text-gray-700 sm:col-span-2 sm:mt-0"
-              type="text"
-              name="nombre"
-              placeholder="Nombre"
-            />
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">
-              Correo electronico
+              Email
             </dt>
-            <dd className="mt-1 text-xl leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
               {data.email}
+            </dd>
+          </div>
+
+          <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt className="text-sm font-medium leading-6 text-gray-900">
+              Tipo de usuario
+            </dt>
+            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+              {data.role}
             </dd>
           </div>
         </dl>
