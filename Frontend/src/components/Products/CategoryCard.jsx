@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
-export const CategoryCard = ({ text, imgSrc, route }) => {
+export const CategoryCard = ({ categoryName, imageId, route }) => {
+  const categoryImageRoute = 'public/assets/png/products/';
   const navigate = useNavigate();
   return (
     <article
@@ -9,11 +10,11 @@ export const CategoryCard = ({ text, imgSrc, route }) => {
     >
       <img
         className="max-w-[280px] sm:p-10"
-        src={imgSrc}
-        alt={`Categoria ${text}`}
+        src={categoryImageRoute + imageId}
+        alt={` ${categoryName}`}
       />
       <span className="text-center text-brown font-[500] w-full capitalize">
-        {text}{' '}
+        {categoryName}{' '}
       </span>
     </article>
   );

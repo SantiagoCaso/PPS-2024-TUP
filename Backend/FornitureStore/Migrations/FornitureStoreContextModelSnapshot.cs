@@ -49,6 +49,9 @@ namespace FornitureStore.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(65,30)");
+
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 

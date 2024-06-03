@@ -51,6 +51,8 @@ builder.Services.AddDbContext<FornitureStoreContext>(options =>
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
 builder.Services.AddLogging();
 
 builder.Services.AddAuthentication("Bearer")
@@ -81,6 +83,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(builder =>
+{
+    builder.AllowAnyOrigin()
+    .AllowAnyHeader()
+    .AllowAnyMethod();
+});
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

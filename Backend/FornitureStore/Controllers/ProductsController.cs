@@ -34,7 +34,8 @@ namespace FornitureStore.Controllers
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
             try
@@ -53,7 +54,8 @@ namespace FornitureStore.Controllers
             }
         }
 
-        [HttpGet("category/{categoryId}")]
+        [HttpGet]
+        [Route("category/{categoryId}")]
         public async Task<IActionResult> GetProductsByCategoryId(int categoryId)
         {
             try
@@ -120,7 +122,8 @@ namespace FornitureStore.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete]
+        [Route("{id}")]
         [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> DeleteProduct(int id)
         {

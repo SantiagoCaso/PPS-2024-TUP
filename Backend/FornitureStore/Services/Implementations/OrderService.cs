@@ -60,12 +60,13 @@ namespace FornitureStore.Services.Implementations
         {
             try
             {
+                order.Total = order.OrderDetails.Sum(od => od.Price * od.Quantity);
                 await _fornitureStoreContext.Orders.AddAsync(order);
                 await _fornitureStoreContext.SaveChangesAsync();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al agregar la orden {OrderId}", order.Id);
+                _logger.LogError(ex, $"Error al agregar la orden {order.Id}" );
                 throw;
             }
         }
@@ -111,7 +112,7 @@ namespace FornitureStore.Services.Implementations
 
                 if (order == null)
                 {
-                    _logger.LogWarning("La orden con ID {OrderId} no fue encontrada", orderId);
+                    _logger.LogWarning($"La orden con ID {orderId} no fue encontrada" );
                     return false;
                 }
 
@@ -122,7 +123,7 @@ namespace FornitureStore.Services.Implementations
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Ocurrió un error al eliminar la orden con ID {OrderId}", orderId);
+                _logger.LogError(ex, $"Ocurrió un error al eliminar la orden con ID {orderId}" );
                 return false;
             }
         }
