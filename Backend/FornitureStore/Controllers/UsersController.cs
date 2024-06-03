@@ -35,7 +35,8 @@ namespace FornitureStore.Controllers
             }
         }
 
-        [HttpGet("{email}")]
+        [HttpGet]
+        [Route("{email}")]
         [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> GetUserByEmail(string email)
         {
@@ -56,7 +57,8 @@ namespace FornitureStore.Controllers
             }
         }
 
-        [HttpGet("{userId:int}")]
+        [HttpGet]
+        [Route("{userId:int}")]
         [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> GetUserById(int userId)
         {
@@ -103,7 +105,8 @@ namespace FornitureStore.Controllers
             }
         }
 
-        [HttpDelete("{userId:int}")]
+        [HttpDelete]
+        [Route("{userId:int}")]
         [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> DeleteUserById(int userId)
         {

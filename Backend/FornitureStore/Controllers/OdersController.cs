@@ -1,4 +1,5 @@
 ﻿using FornitureStore.Models.Entities;
+using FornitureStore.Services.Implementations;
 using FornitureStore.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -22,8 +23,18 @@ namespace FornitureStore.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllOrders()
         {
-            var orders = await _orderService.GetAllOrdersAsync();
-            return Ok(orders);
+            try
+            {
+                var orders = await _orderService.GetAllOrdersAsync();
+                return Ok(orders);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener las ordenes.");
+                return StatusCode(500, "Ocurrió un error al procesar su solicitud.");
+            }
+            
+            
         }
 
         [HttpGet("{id}")]
@@ -105,7 +116,7 @@ namespace FornitureStore.Controllers
                 {
                     return NotFound();
                 }
-                return NoContent();
+                return Ok($"Orden ID {id} eliminada correctamente");
             }
             catch (Exception ex)
             {

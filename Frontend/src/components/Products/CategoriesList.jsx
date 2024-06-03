@@ -23,11 +23,10 @@ export const CategoriesList = () => {
         {categories.map((category) => {
           return (
             <CategoryCard
-              key={category.name}
-              imgSrc={category.icon}
-              text={category.name}
-              // route={category.route}
-              route={'/categories/' + category.name}
+              key={category.id}
+              imageId={category.imageId}
+              categoryName={category.categoryName}
+              route={'/categories/' + category.id}
             />
           );
         })}

@@ -21,10 +21,8 @@ namespace FornitureStore.Models.Entities
 
         public ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 
-        [NotMapped]
-        public decimal Total { get
-            {
-                return OrderDetails.Sum(od => od.Price * od.Quantity);
-            }}
+        
+        public decimal Total { get; set; }
+        
     }
 }

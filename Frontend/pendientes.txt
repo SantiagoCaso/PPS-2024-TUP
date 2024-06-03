@@ -1,0 +1,3 @@
+Panel de administrador
+
+Al apretar el boton para crear una nueva entiddad, replicar el funcionamiento de swagger generando un json con el scheme de la entidad a crear.
