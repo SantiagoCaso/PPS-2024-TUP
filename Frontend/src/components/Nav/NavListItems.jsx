@@ -14,7 +14,7 @@ export const NavListItems = () => {
         return (
           <li className="" key={i}>
             <NavLink
-              to={`/categories/${category.route}`}
+              to={`/categories/${i + 1}`}
               className="capitalize tracking-wide  flex gap-3 text-sm lg:text-base"
               key={category}
               onClick={() => setShowMenu(false)}

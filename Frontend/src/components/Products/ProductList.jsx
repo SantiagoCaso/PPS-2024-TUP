@@ -2,7 +2,7 @@ import { ProductCard } from './ProductCard';
 import { GoBackButton } from './../shared/GoBackButton';
 import { useParams } from 'react-router-dom';
 import { Loader } from '../shared/Loader';
-import { useProductsByCategoryId } from '../../hooks/useProductsByCategoryId';
+import { useProductsByCategoryId } from '../../hooks/products/useProductsByCategoryId';
 import { Error } from '../shared/Error';
 export const ProductList = () => {
   const { categoryId } = useParams();

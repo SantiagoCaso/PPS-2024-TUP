@@ -19,6 +19,9 @@
   body {
     @apply font-montserrat text-secondaryDark
   }
+  .subtitle{
+    @apply font-[600] tracking-wider text-2xl w-full 
+  }
 
   .borderLight {
     @apply border-[1px] border-white border-opacity-20

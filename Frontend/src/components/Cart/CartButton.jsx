@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { Cart } from "../../icons/Cart";
+import { CartIcon } from "../../icons/CartIcon";
 
 export const CartButton = () => {
   return (
     <NavLink to={'/cart'}>
-      <Cart />
+      <CartIcon />
     </NavLink>
   );
 };

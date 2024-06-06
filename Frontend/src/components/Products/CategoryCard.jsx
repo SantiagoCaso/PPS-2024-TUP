@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
 export const CategoryCard = ({ categoryName, imageId, route }) => {
-  const categoryImageRoute = 'public/assets/png/products/';
+  const categoryImageRoute = '/assets/png/products/';
   const navigate = useNavigate();
   return (
     <article

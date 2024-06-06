@@ -15,6 +15,7 @@ module.exports = {
         secondaryDark:"#191919",
         BgDark:"#040406",
         bgLight:"#FAFAFA",
+        bgSemiLight:"#f4f4f5",
         light:"#FEFAE0",
         brown:"#AE8C7E"
       },screens: {
