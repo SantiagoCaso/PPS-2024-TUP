@@ -8,7 +8,7 @@ import { CartButton } from "../Cart/CartButton";
 export const NavBar = () => {
   return (
     <NavProvider>
-      <nav className="bg-BgDark text-light  px-4 lg:px-7 xl:mb-10 ">
+      <nav className="bg-BgDark text-light  px-4 lg:px-7  ">
         <div className="flex h-16  justify-between items-center leading-[64px]  ">
           <Logo customStyle="w-10 " />
           <div className="w-full flex gap-5 items-center justify-end relative xl:gap-7 ">

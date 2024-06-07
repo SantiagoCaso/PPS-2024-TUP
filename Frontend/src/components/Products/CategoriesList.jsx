@@ -1,24 +1,32 @@
-import { CategoriesData } from "../../services/category/CategoriesData";
-import { CategoryCard } from "./CategoryCard";
-import { Subtitle } from "./../shared/Subtitle";
+import { CategoryCard } from './CategoryCard';
+import { Subtitle } from './../shared/Subtitle';
+import { useEffect, useState } from 'react';
+import { GetCategories } from '../../services/implementations/category/categoryService';
 
-
-
+import { SkeletonCard } from '../shared/SkeletonCard';
 export const CategoriesList = () => {
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    GetCategories().then((catResponse) => {
+      console.log(catResponse.data);
+      setCategories(catResponse.data);
+    });
+  }, []);
+
+  if (!categories) {
+    return <SkeletonCard />;
+  }
   return (
     <section className="w-full ">
-      
-
-      <Subtitle text={"Categorias"} />
+      <Subtitle text={'Categorias'} />
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 ">
-        {CategoriesData.map((category) => {
+        {categories.map((category) => {
           return (
             <CategoryCard
-              key={category.name}
-              src={category.src}
-              text={category.name}
-              // route={category.route}
-              route={'/categories/'+ category.id}
+              key={category.id}
+              imageId={category.imageId}
+              categoryName={category.categoryName}
+              route={'/categories/' + category.id}
             />
           );
         })}

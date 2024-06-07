@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { GetAllOrders } from "../../../services/order/orderService";
+
 import { Loader } from "../../shared/Loader";
-import Order from "./Order";
+import OrderDetail from "../OrderDetail";
+import { GetAllOrders } from "../../../services/implementations/order/orderService";
 
 export default function OrdersList() {
   const [orders, setOrders] = useState();
@@ -18,7 +19,7 @@ export default function OrdersList() {
   return (
     <ul role="list" className="divide-y divide-gray-600">
       {orders.map((order) => (
-        <Order
+        <OrderDetail
           key={order.id}
           id={order.id}
           userId={order.userId}

@@ -1,0 +1,150 @@
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\appsettings.Development.json
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\appsettings.json
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\FornitureStore.exe
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\FornitureStore.deps.json
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\FornitureStore.runtimeconfig.json
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\FornitureStore.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\FornitureStore.pdb
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Humanizer.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\MySqlConnector.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.csproj.AssemblyReference.cache
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.AssemblyInfoInputs.cache
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.AssemblyInfo.cs
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.csproj.CoreCompileInputs.cache
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.MvcApplicationPartsAssemblyInfo.cs
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.MvcApplicationPartsAssemblyInfo.cache
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.FornitureStore.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.build.FornitureStore.props
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.FornitureStore.props
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.FornitureStore.props
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets.build.json
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets.development.json
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\scopedcss\bundle\FornitureStore.styles.css
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.csproj.CopyComplete
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\refint\FornitureStore.dll
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.pdb
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.genruntimeconfig.cache
+D:\Archivos de programa\Proyectos .NET\FornitureStore\FornitureStore\obj\Debug\net6.0\ref\FornitureStore.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\appsettings.json
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\FornitureStore.exe
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\FornitureStore.deps.json
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\FornitureStore.runtimeconfig.json
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\FornitureStore.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\FornitureStore.pdb
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.FornitureStore.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.build.FornitureStore.props
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.FornitureStore.props
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.FornitureStore.props
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\scopedcss\bundle\FornitureStore.styles.css
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.csproj.CopyComplete
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\refint\FornitureStore.dll
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.pdb
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\FornitureStore.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\FornitureStore\FornitureStore\obj\Debug\net6.0\ref\FornitureStore.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\appsettings.json
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\FornitureStore.exe
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\FornitureStore.deps.json
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\FornitureStore.runtimeconfig.json
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\FornitureStore.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\FornitureStore.pdb
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\FornitureStore.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\FornitureStore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\FornitureStore.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\FornitureStore.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\FornitureStore.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\FornitureStore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\FornitureStore.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.FornitureStore.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.build.FornitureStore.props
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.FornitureStore.props
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.FornitureStore.props
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\scopedcss\bundle\FornitureStore.styles.css
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\FornitureStore.csproj.CopyComplete
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\FornitureStore.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\refint\FornitureStore.dll
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\FornitureStore.pdb
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\FornitureStore.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\PPS-2024-TUP\Backend\FornitureStore\obj\Debug\net6.0\ref\FornitureStore.dll

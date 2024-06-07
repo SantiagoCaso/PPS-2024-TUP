@@ -41,7 +41,11 @@ const routes = [
         element: <ProtectedRoute route="/signin" />,
         children: [
           {
+<<<<<<< HEAD
             path: "/profile/:userId",
+=======
+            path: '/profile',
+>>>>>>> d9406e528556f4e1204b1f653e28337f198cc0dd
             element: <Profile />,
           },
         ],
