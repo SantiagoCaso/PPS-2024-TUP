@@ -3,10 +3,16 @@ import { Loader } from '../shared/Loader';
 import { useParams } from 'react-router-dom';
 import { useProductById } from '../../hooks/products/useProductById';
 import { Error } from '../shared/Error';
+import { useAddItemQuantity } from '../../hooks/cart/useAddItemQuantity';
+import { useEffect } from 'react';
 
 export const ProductOverview = () => {
   const { productId } = useParams();
   const { product, loading, error } = useProductById(productId);
+  const { AddItemQuantity } = useAddItemQuantity();
+  useEffect(() => {
+    console.log(product);
+  }, [product]);
   if (loading) return <Loader />;
   if (error) return <Error />;
 
@@ -28,7 +34,10 @@ export const ProductOverview = () => {
           </h2>
           <span className="text-2xl font-[400] ">${product.price}</span>
           <p className="font-[400] ">{product.productDescription}</p>
-          <button className="bg-secondaryDark text-brown font-semibold tracking-wide rounded-md py-3 w-fit px-5 hover:bg-primaryDark ">
+          <button
+            onClick={() => AddItemQuantity(product)}
+            className="bg-secondaryDark text-brown font-semibold tracking-wide rounded-md py-3 w-fit px-5 hover:bg-primaryDark "
+          >
             Agregar al carrito
           </button>
         </div>

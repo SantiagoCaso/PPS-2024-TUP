@@ -1,11 +1,17 @@
+import { useContext } from 'react';
 import { Subtitle } from '../components/shared/Subtitle';
+import { ProductsContext } from '../context/Products/ProductsContext';
 export const CartPage = () => {
-  const test = [1, 2, 3, 4];
+  const { cartItems, categories } = useContext(ProductsContext);
+
+  if (!cartItems.length) {
+    return <div>Carrito Vacio</div>;
+  }
   return (
     <section className="flex flex-col justify-center items-center  pt-10 w-full  ">
       <Subtitle text={'Carrito de compras'} />
 
-      {test.map((e, i) => {
+      {cartItems.map((item, i) => {
         return (
           <article
             key={i}
@@ -25,19 +31,21 @@ export const CartPage = () => {
 
             <div className="flex flex-col justify-between items-start   w-1/3 ">
               <div className="">
-                <h4 className="font-semibold">Product Name</h4>
-                <h5>Category</h5>
+                <h4 className="font-semibold">{item.name}</h4>
+                <h5 className='capitalize'>{categories[item.categoryId - 1].name}</h5>
               </div>
 
               <div className="addContainer w-full ">
                 <span className="changeAdd text-base ">–</span>
-                <div className="changeAdd  text-base borderDark border-y-0 border-opacity-5 cursor-default">4</div>
+                <div className="changeAdd  text-base borderDark border-y-0 border-opacity-5 cursor-default">
+                  {item.quantity}
+                </div>
                 <span className="changeAdd font-[300] text-lg">+</span>
               </div>
             </div>
             <div className="flex flex-col justify-between items-end  w-1/3 ">
-              <span className="font-semibold  ">✕</span>
-              <span>$30.00</span>
+              <span className="font-semibold cursor-pointer ">✕</span>
+              <span>$ {item.price}</span>
             </div>
           </article>
         );
