@@ -19,10 +19,11 @@ export const ProductList = () => {
         {productsByCategory?.map((product) => (
           <ProductCard
             key={product.id}
-            title={product.name}
+            title={product.productName}
             price={product.price}
             stock={product.available}
             productId={product.id}
+            available = {product.available}
           />
         ))}
       </div>

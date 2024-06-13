@@ -26,7 +26,7 @@ export const useAddItemQuantity = () => {
         quantity: 1,
       };
 
-      prevCartItems = [...prevCartItems, NewCartItem];
+      prevCartItems = [NewCartItem,...prevCartItems];
     }
 
     setCartItems(prevCartItems);

@@ -7,7 +7,10 @@ export const useDeleleteItem = () => {
   function DeleteItem(productToDelete) {
     let currentCartItems = [...cartItems];
 
-    currentCartItems.splice(currentCartItems.indexOf(productToDelete, 1));
+    currentCartItems = currentCartItems.filter(
+      (item) => item.id != productToDelete.id
+    );
+
     setCartItems(currentCartItems);
   }
   return { DeleteItem };

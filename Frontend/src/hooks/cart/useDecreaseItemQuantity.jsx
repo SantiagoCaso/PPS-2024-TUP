@@ -4,10 +4,11 @@ import { useDeleleteItem } from './useDeleleteItem';
 
 export const useDecreaseItemQuantity = () => {
   const { DeleteItem } = useDeleleteItem();
-  const { ProductExistInCart, cartItems } = useContext(ProductsContext);
-  let prevCartItems = [...cartItems];
+  const { ProductExistInCart, cartItems,setCartItems } = useContext(ProductsContext);
+  
 
   function DecreaseItemQuantity(product) {
+    let prevCartItems = [...cartItems];
     let existingItem = ProductExistInCart(product.id);
 
     if (existingItem) {
@@ -21,6 +22,7 @@ export const useDecreaseItemQuantity = () => {
         DeleteItem(existingItem);
       }
     }
+    setCartItems(prevCartItems);
   }
 
   return { DecreaseItemQuantity };
