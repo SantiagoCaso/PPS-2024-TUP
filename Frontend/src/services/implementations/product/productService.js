@@ -11,6 +11,6 @@ export const GetProductById = (productId) => {
 };
 
 //Public
-export const GetProdyctByCategoryId = (categoryId) => {
+export const GetProductsByCategoryId = (categoryId) => {
   return api.get('/products/category/' + categoryId);
 };

@@ -1,24 +1,24 @@
-import { useEffect, useState } from "react";
-import { GoBackButton } from "./../shared/GoBackButton";
-import { Loader } from "../shared/Loader";
-import { useParams } from "react-router-dom";
-import { GetProductById } from "../../services/implementations/product/productService";
+import { GoBackButton } from './../shared/GoBackButton';
+import { Loader } from '../shared/Loader';
+import { useParams } from 'react-router-dom';
+import { useProductById } from '../../hooks/products/useProductById';
+import { Error } from '../shared/Error';
+import { useAddItemQuantity } from '../../hooks/cart/useAddItemQuantity';
+import { useEffect } from 'react';
 
 export const ProductOverview = () => {
-  const [data, setData] = useState(null);
   const { productId } = useParams();
+  const { product, loading, error } = useProductById(productId);
+  const { AddItemQuantity } = useAddItemQuantity();
   useEffect(() => {
-    GetProductById(productId).then((res) => {
-      setData(res.data);
-    });
-  }, [productId]);
-  if (data == null) {
-    return <Loader />;
-  }
+    console.log(product);
+  }, [product]);
+  if (loading) return <Loader />;
+  if (error) return <Error />;
+
   return (
     <section className="">
       <GoBackButton />
-
       <article className="flex flex-col  gap-10 md:flex-row">
         <div className="cardBgLight md:w-1/2">
           <img
@@ -29,10 +29,15 @@ export const ProductOverview = () => {
         </div>
 
         <div className="flex flex-col gap-3 md:w-1/2">
-          <h2 className="font-bold text-4xl text-brown ">{data.name}</h2>
-          <span className="text-2xl font-[400] ">${data.price}</span>
-          <p className="font-[400] ">{data.description}</p>
-          <button className="bg-secondaryDark text-brown font-semibold tracking-wide rounded-md py-3 w-fit px-5 hover:bg-primaryDark ">
+          <h2 className="font-bold text-4xl text-brown ">
+            {product.productName}
+          </h2>
+          <span className="text-2xl font-[400] ">${product.price}</span>
+          <p className="font-[400] ">{product.productDescription}</p>
+          <button
+            onClick={() => AddItemQuantity(product)}
+            className="bg-secondaryDark text-brown font-semibold tracking-wide rounded-md py-3 w-fit px-5 hover:bg-primaryDark "
+          >
             Agregar al carrito
           </button>
         </div>

@@ -9,7 +9,7 @@ using System.Text;
 
 namespace FornitureStore.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/authenticate")]
     [ApiController]
     public class AuthenticateController : ControllerBase
     {

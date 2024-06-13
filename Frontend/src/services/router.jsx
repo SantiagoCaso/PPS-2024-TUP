@@ -9,7 +9,6 @@ import { CartPage } from './../pages/CartPage';
 import { HomePage } from './../pages/HomePage';
 import { ProductOverview } from '../components/Products/ProductOverview';
 import { Register } from './../components/Forms/Register/Register';
-import AdminProfile from '../components/User/Admin/AdminProfile';
 import { ProtectedRoute } from '../components/shared/ProtectedRoute';
 
 const routes = [
@@ -44,10 +43,6 @@ const routes = [
             element: <Profile />,
           },
         ],
-      },
-      {
-        path: '/profile/admin',
-        element: <AdminProfile />,
       },
       {
         path: '/cart',
