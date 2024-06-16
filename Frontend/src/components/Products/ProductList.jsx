@@ -2,13 +2,13 @@ import { ProductCard } from './ProductCard';
 import { GoBackButton } from './../shared/GoBackButton';
 import { useParams } from 'react-router-dom';
 import { Loader } from '../shared/Loader';
-import { useProductsByCategoryId } from '../../hooks/useProductsByCategoryId';
+import { useProductsByCategoryId } from '../../hooks/products/useProductsByCategoryId';
 import { Error } from '../shared/Error';
+
 export const ProductList = () => {
   const { categoryId } = useParams();
   const { productsByCategory, loading, error } =
     useProductsByCategoryId(categoryId);
-
   if (loading) return <Loader />;
   if (error) return <Error />;
 
@@ -19,10 +19,11 @@ export const ProductList = () => {
         {productsByCategory?.map((product) => (
           <ProductCard
             key={product.id}
-            title={product.name}
+            title={product.productName}
             price={product.price}
             stock={product.available}
             productId={product.id}
+            available = {product.available}
           />
         ))}
       </div>

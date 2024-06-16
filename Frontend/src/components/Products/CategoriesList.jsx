@@ -1,21 +1,14 @@
 import { CategoryCard } from './CategoryCard';
 import { Subtitle } from './../shared/Subtitle';
-import { useEffect, useState } from 'react';
-import { GetCategories } from '../../services/implementations/category/categoryService';
 
 import { SkeletonCard } from '../shared/SkeletonCard';
+import { useGetCategories } from '../../hooks/categories/useGetCategories';
+import { Error } from '../shared/Error';
 export const CategoriesList = () => {
-  const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    GetCategories().then((catResponse) => {
-      console.log(catResponse.data);
-      setCategories(catResponse.data);
-    });
-  }, []);
+  const { categories, error, loading } = useGetCategories();
 
-  if (!categories) {
-    return <SkeletonCard />;
-  }
+  if (loading) return <SkeletonCard />;
+  if (error) return <Error />;
   return (
     <section className="w-full ">
       <Subtitle text={'Categorias'} />

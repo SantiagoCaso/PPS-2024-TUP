@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-import { GetAllProducts } from '../services/implementations/product/productService';
+import { GetAllProducts } from '../../services/implementations/product/productService';
 
 export const useAllProducts = () => {
   const [allProducts, setAllProducts] = useState([]);

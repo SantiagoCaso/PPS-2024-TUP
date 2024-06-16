@@ -3,11 +3,12 @@ using FornitureStore.Models.Entities;
 using FornitureStore.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace FornitureStore.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/users")]
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -152,6 +153,40 @@ namespace FornitureStore.Controllers
                 return StatusCode(500, "Ocurrió un error al procesar su solicitud.");
             }
         }
-    }
 
+        [HttpGet]
+        [Route("profile")]
+        [Authorize]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized();
+            }
+
+            var user = await _userService.GetUserByIdAsync(int.Parse(userId));
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            UserGetDto userProfile = new UserGetDto
+            {
+                Id = user.Id,
+                UserName = user.UserName ?? "Not Asigned",
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email,
+                Role = user.Role,
+                CreatedAt = user.CreatedAt
+            };
+
+            return Ok(userProfile);
+        }
+
+    }
 }
+

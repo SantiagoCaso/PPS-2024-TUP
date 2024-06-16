@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState();
 
   useEffect(() => {
-    console.log(token);
+  
     verifyUserSession();
   }, []);
 
@@ -17,20 +17,21 @@ export const AuthProvider = ({ children }) => {
     const storedToken = getToken();
     if (!storedToken) {
       handleLogout();
+      console.log("Auth proveider - Logout porque no hay token en local storage")
       return;
     }
     try {
-      const decodedToken = jwtDecode(storedToken); // Decodificar el token almacenado
+      const decodedToken = jwtDecode(storedToken);
       const currentTime = Date.now() / 1000;
       if (decodedToken.exp < currentTime) {
         handleLogout();
-        console.log('Expiro el token y se cerro sesion');
+        console.log(' Auth proveider - Expiro el token y se cerro sesion');
       } else {
-        console.log('token valido');
+        console.log('Auth proveider - token valido');
         setIsAuthenticated(true);
       }
     } catch (error) {
-      console.error('Error decoding token:', error);
+      console.error(' Auth proveider - Error decoding token:', error);
       handleLogout();
     }
   };
@@ -39,12 +40,6 @@ export const AuthProvider = ({ children }) => {
     clearToken();
     setIsAuthenticated(false);
   };
-
-  // const checkAuth = () => {
-  //   if (getToken()) {
-  //     setIsAuthenticated(true);
-  //   }
-  // };
 
   const getToken = () => {
     let storedToken = localStorage.getItem('token');
