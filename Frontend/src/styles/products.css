@@ -8,9 +8,11 @@
 @layer components {
 
   .addContainer {
-    @apply flex  h-[40px] lg:h-[50px] items-center  bg-bgSemiLight  justify-between rounded;
+    @apply flex  lg:h-[50px] items-center text-center  justify-evenly rounded-md text-sm cursor-pointer md:text-base w-full max-w-[200px] overflow-hidden  divide-x-[1.5px] ;
   }
-  .changeAdd {
-    @apply   text-xl cursor-pointer text-center   w-full   h-full flex justify-center items-center  lg:px-5;
+
+  .cart_quantity-change-item {
+    @apply w-1/3  cursor-pointer bg-bgSemiLight hover:bg-slate-200 h-[40px] leading-[40px] select-none ;
   }
+ 
 }
