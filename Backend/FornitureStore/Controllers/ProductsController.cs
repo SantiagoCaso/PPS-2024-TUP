@@ -54,6 +54,25 @@ namespace FornitureStore.Controllers
             }
         }
 
+        [HttpGet("search")]
+        public async Task<IActionResult> GetProductsByName(string name, int? limit)
+        {
+            try
+            {
+                var products = await _productService.GetProductsByNameAsync(name, limit);
+                if (products == null || !products.Any())
+                {
+                    return NotFound();
+                }
+                return Ok(products);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar productos con el nombre {Name}.", name);
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
         [HttpGet]
         [Route("category/{categoryId}")]
         public async Task<IActionResult> GetProductsByCategoryId(int categoryId)
