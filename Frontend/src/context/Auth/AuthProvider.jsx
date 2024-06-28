@@ -6,10 +6,9 @@ import { AuthContext } from './AuthContext';
 import { jwtDecode } from 'jwt-decode';
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem('token'));
-  const [isAuthenticated, setIsAuthenticated] = useState();
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
 
   useEffect(() => {
-  
     verifyUserSession();
   }, []);
 
@@ -17,7 +16,9 @@ export const AuthProvider = ({ children }) => {
     const storedToken = getToken();
     if (!storedToken) {
       handleLogout();
-      console.log("Auth proveider - Logout porque no hay token en local storage")
+      console.log(
+        'Auth proveider - Logout porque no hay token en local storage'
+      );
       return;
     }
     try {

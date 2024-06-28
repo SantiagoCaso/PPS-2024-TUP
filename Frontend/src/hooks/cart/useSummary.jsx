@@ -8,11 +8,11 @@ export const useSummary = () => {
   const costoEnvio = 20;
   function SetCartSummary() {
     const newTotal = cartItems.reduce((acc, item) => {
-      return (acc += item.price);
+      return (acc += item.price * item.quantity);
     }, 0);
-    setSubTotal(newTotal);
-    setTotal(newTotal + costoEnvio);
+    setSubTotal(newTotal.toFixed(2));
+    setTotal((newTotal + costoEnvio).toFixed(2));
   }
 
-  return { SetCartSummary, subTotal, total, costoEnvio };
+  return { SetCartSummary, subTotal, total, costoEnvio,cartItems };
 };
