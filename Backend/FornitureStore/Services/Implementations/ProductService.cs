@@ -41,6 +41,15 @@ namespace FornitureStore.Services.Implementations
                 .FirstOrDefaultAsync(p => p.Id == idProduct);
         }
 
+        public async Task<IEnumerable<Product>> GetProductsByNameAsync(string productName, int? limit)
+        {
+            
+           return  await _fornitureStoreContext.Products
+                .AsNoTracking()
+                .Where(p => p.ProductName.Contains(productName))
+                .ToListAsync();
+        }
+
         public async Task<bool> AddProductAsync(ProductCreateDto product)
         {
             try
