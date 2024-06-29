@@ -15,5 +15,5 @@ export const GetProductsByCategoryId = (categoryId) => {
   return api.get('/products/category/' + categoryId);
 };
 export const GetProductsByName = (productName) => {
-  return api.get('/products/category/' + productName);
+  return api.get('/products/search/' + productName);
 };
