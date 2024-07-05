@@ -8,6 +8,7 @@ export const checkoutScheme = object({
     .max(80),
   tarjetaNumero: string()
     .required('Campo requerido')
+    .transform(value => value.replace(/\s+/g, ''))
     .matches(/^[0-9]+$/, "Solo se permiten números")
     .min(5)
     .max(16, 'Número inválido')

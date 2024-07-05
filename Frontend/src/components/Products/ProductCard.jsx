@@ -14,7 +14,7 @@ export const ProductCard = ({ title, price, stock, productId,available }) => {
         !stock ? 'opacity-45 cursor-not-allowed' : 'opacity-100'
       }`}
     >
-      <div className="cardBgLight grid place-items-center aspect-square  transition-all duration-200 borderDark border-opacity-5 group-hover:drop-shadow group-hover:border-opacity-10 ">
+      <div className="cardBgLight grid place-items-center aspect-square  transition-all duration-200 borderDark border-opacity-10 group-hover:drop-shadow group-hover:border-opacity-10 ">
         <img
           className=" w-1/2 drop-shadow-xl transition-transform duration-200  group-hover:scale-105"
           src="../../../public/assets/png/products/small.png"
@@ -23,10 +23,10 @@ export const ProductCard = ({ title, price, stock, productId,available }) => {
       </div>
 
       <div className="w-full flex justify-between">
-        <h3 className="font-[500]">{title}</h3>
-        <h4 className="tracking-wide  text-[#6b7280]">${price}</h4>
+        <h3 className="font-[500] text-dark-light">{title}</h3>
+        <h4 className="tracking-wide  text-[#6b7280] ">$ {price}</h4>
       </div>
-      <h5 className="tracking-wide  text-[#6b7280]"></h5>
+      
     </article>
   );
 };

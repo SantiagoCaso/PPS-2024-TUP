@@ -4,6 +4,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -17,6 +18,7 @@ module.exports = {
         bgLight:"#FAFAFA",
         bgSemiLight:"#f4f4f5",
         light:"#FEFAE0",
+        darkLight:"#B4B4B4",
         brown:"#AE8C7E"
       },screens: {
         tablet: '500px'

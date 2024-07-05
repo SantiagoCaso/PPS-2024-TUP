@@ -7,6 +7,7 @@ import { jwtDecode } from 'jwt-decode';
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   useEffect(() => {
     verifyUserSession();
@@ -58,6 +59,19 @@ export const AuthProvider = ({ children }) => {
     setIsAuthenticated(true);
   };
 
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -67,6 +81,9 @@ export const AuthProvider = ({ children }) => {
         handleLogout,
         token,
         verifyUserSession,
+        toggleTheme,
+        setTheme,
+        theme,
       }}
     >
       {children}

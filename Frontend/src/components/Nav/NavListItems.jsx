@@ -15,7 +15,7 @@ export const NavListItems = () => {
           <li className="" key={i}>
             <NavLink
               to={`/categories/${i + 1}`}
-              className="capitalize tracking-wide  flex gap-3 text-sm lg:text-base"
+              className="capitalize tracking-wide dark:font-medium  flex gap-3 text-sm lg:text-base"
               key={category}
               onClick={() => setShowMenu(false)}
             >
