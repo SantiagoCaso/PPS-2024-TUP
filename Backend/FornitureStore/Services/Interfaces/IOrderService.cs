@@ -1,4 +1,5 @@
-﻿using FornitureStore.Models.Entities;
+﻿using FornitureStore.Models.Dtos.Orders;
+using FornitureStore.Models.Entities;
 using System.Threading.Tasks;
 
 namespace FornitureStore.Services.Interfaces
@@ -10,7 +11,7 @@ namespace FornitureStore.Services.Interfaces
         Task<IEnumerable<OrderDetail>> GetOrderDetailsByOrderIdAsync(int orderId);
         Task<IEnumerable<Order>> GetOrdersByUserIdAsync(int idUser);
         Task<bool> OrderExistsAsync(int idOrder);
-        Task AddOrderAsync(Order order);
+        Task AddOrderAsync(OrderCreateDto order);
         //Task<bool> UpdateOrderAsync(Order order, List<OrderDetail> orderDetails);
         Task<bool> DeleteOrderAndDetailsAsync(int orderId);
 
