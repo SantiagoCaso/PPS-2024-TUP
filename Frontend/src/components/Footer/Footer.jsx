@@ -1,5 +1,6 @@
 const Footer = () => {
   return (
+<<<<<<< HEAD
     <div className="mx-auto  py-10 xl:px-20 lg:px-12 sm:px-6 px-4 bg-BgDark text-light ">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
         <div className="flex flex-col flex-shrink-0">
@@ -58,6 +59,33 @@ const Footer = () => {
             Desarrolladores
           </h2>
           <p className="hover:text-gray-500 text-base leading-4 mt-6  cursor-pointer">
+=======
+    <div className="mx-auto  py-10 xl:px-20 lg:px-12 sm:px-6 px-4 bg-dark-white text-light-dark dark:font-medium ">
+      <div className="flex  justify-evenly items-start gap-5 ">
+        <div className="">
+          <h2 className="text-base font-semibold leading-4 ">Categorias</h2>
+          <div className="sm:flex sm:items-start gap-5">
+          <p className="hover:underline text-base leading-4 mt-6  cursor-pointer">
+            <a href="/aboutus" target="_blank" rel="noopener noreferrer">
+              Muebles Pequeños
+            </a>
+          </p>
+          <p className="hover:underline text-base leading-4 mt-6  cursor-pointer">
+            Muebles Medianos
+          </p>
+          <p className="hover:underline text-base leading-4 mt-6  cursor-pointer">
+            Muebles Grandes
+          </p>
+          </div>
+        </div>
+
+        <div className=" ">
+          <h2 className="text-base font-semibold leading-4 ">
+            Desarrolladores
+          </h2>
+         <div className="sm:flex sm:items-start gap-5">
+         <p className="hover:underline text-base leading-4 mt-6  cursor-pointer">
+>>>>>>> dc43c88e591e7668f94a71a7cb8d686e74522357
             <a
               href="https://faustosavoya.vercel.app/"
               target="_blank"
@@ -66,10 +94,15 @@ const Footer = () => {
               Fausto Savoya
             </a>
           </p>
+<<<<<<< HEAD
           <p className="hover:text-gray-500 text-base leading-4 mt-6  cursor-pointer">
             Elias Gonzales
           </p>
           <p className="hover:text-gray-500 text-base leading-4 mt-6  cursor-pointer">
+=======
+
+          <p className="hover:underline text-base leading-4 mt-6  cursor-pointer">
+>>>>>>> dc43c88e591e7668f94a71a7cb8d686e74522357
             <a
               href="https://www.instagram.com/santyago_caso?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
@@ -78,6 +111,10 @@ const Footer = () => {
               Santiago Caso
             </a>
           </p>
+<<<<<<< HEAD
+=======
+         </div>
+>>>>>>> dc43c88e591e7668f94a71a7cb8d686e74522357
         </div>
       </div>
     </div>
