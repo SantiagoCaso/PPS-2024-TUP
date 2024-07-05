@@ -72,11 +72,6 @@ export const AuthProvider = ({ children }) => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
-
-
-
-
-
   return (
     <AuthContext.Provider
       value={{
@@ -86,7 +81,9 @@ export const AuthProvider = ({ children }) => {
         handleLogout,
         token,
         verifyUserSession,
-        toggleTheme
+        toggleTheme,
+        setTheme,
+        theme,
       }}
     >
       {children}

@@ -16,6 +16,6 @@
     @apply w-8
   }
   .bar {
-    @apply h-[1.2px] transition-all duration-700 rounded-full z-10 w-full bg-light bg-opacity-90;
+    @apply h-[1.2px] transition-all duration-700 rounded-full z-10 w-full bg-light dark:bg-BgDark bg-opacity-90;
   }
 }

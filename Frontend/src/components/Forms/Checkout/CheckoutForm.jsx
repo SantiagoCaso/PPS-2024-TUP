@@ -41,7 +41,7 @@ export const CheckoutForm = () => {
         );
       })}
 
-      <button type="submit" className="btn-submit col-span-2 col-start-2">
+      <button type="submit" className="btn-submit col-span-2 col-start-2 ">
         {loading ? (
           <div className="flex items-center gap-3 font-medium ">
             <div

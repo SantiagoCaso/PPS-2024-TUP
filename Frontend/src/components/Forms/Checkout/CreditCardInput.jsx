@@ -3,7 +3,7 @@ import ReactInputMask from "react-input-mask";
 export const CreditCardInput = ({ register, name, placeholder, errors }) => {
   return (
     <div className="input-container">
-      <label className="font-[500] text-gray-700 tracking-tight text-sm tablet:text-base">
+      <label className="font-[500] text-dark-light tracking-tight text-sm tablet:text-base">
         Número de tarjeta
       </label>
       <ReactInputMask
