@@ -13,6 +13,7 @@ namespace FornitureStore.Services.Interfaces
         Task<IEnumerable<Product>> GetAllProductsAsync();
         Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(int categoryId);
         Task<Product?> GetProductByIdAsync(int idProduct);
+        Task<IEnumerable<Product>> GetProductsByNameAsync(string productName, int? limit);
         Task<bool> AddProductAsync(ProductCreateDto product);
         Task<bool> UpdateProductAsync(ProductUpdateDto product);
         Task<bool> DeleteProductAsync(int productId);

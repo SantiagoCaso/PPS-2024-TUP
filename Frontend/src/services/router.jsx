@@ -10,6 +10,7 @@ import { HomePage } from "./../pages/HomePage";
 import { ProductOverview } from "../components/Products/ProductOverview";
 import { Register } from "./../components/Forms/Register/Register";
 import { ProtectedRoute } from "../components/shared/ProtectedRoute";
+import { Checkout } from "../pages/Checkout";
 
 const routes = [
   {
@@ -41,6 +42,10 @@ const routes = [
           {
             path: "/profile",
             element: <Profile />,
+          },
+          {
+            path: "/checkout",
+            element: <Checkout />,
           },
         ],
       },

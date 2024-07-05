@@ -28,7 +28,7 @@ namespace FornitureStore.Controllers
 
        
         [HttpGet]
-        [Route("{id}")]
+        [Route("id")]
         public async Task<IActionResult> GetCategoryById(int id)
         {
             var category = await _categoryService.GetCategoryByIdAsync(id);
@@ -41,7 +41,7 @@ namespace FornitureStore.Controllers
 
      
         [HttpGet]
-        [Route("{categoryName}")]
+        [Route("categoryName")]
         public async Task<IActionResult> GetCategoryByName(string categoryName)
         {
             var category = await _categoryService.GetCategoryByNameAsync(categoryName);

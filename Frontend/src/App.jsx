@@ -1,13 +1,9 @@
-import { Outlet } from 'react-router-dom';
-import { NavBar } from './components/Nav/NavBar';
-import Footer from './components/Footer/Footer';
-import { ProductsProvider } from './context/Products/ProductsProvider';
+import { Outlet } from "react-router-dom";
+import { NavBar } from "./components/Nav/NavBar";
+import Footer from "./components/Footer/Footer";
+import { ProductsProvider } from "./context/Products/ProductsProvider";
 
 function App() {
-
-
-
-  
   return (
     <ProductsProvider>
       <div className="overflow-hidden ">

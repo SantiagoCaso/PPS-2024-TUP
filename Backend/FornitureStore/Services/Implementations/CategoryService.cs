@@ -22,6 +22,7 @@ namespace FornitureStore.Services.Implementations
             try
             {
                 return await _fornitureStoreContext.Categories.AsNoTracking().ToListAsync();
+
             }
             catch (Exception ex)
             {

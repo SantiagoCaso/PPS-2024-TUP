@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-
+ 
   .customShadow {
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
     -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
@@ -58,15 +58,15 @@
   /* FORM */
 
   .input {
-    @apply block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset tracking-wider sm:leading-6
+    @apply block w-full rounded-md border-0 p-1.5 text-sm  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset tracking-wider sm:leading-6 placeholder:text-[13px] tablet:text-base tablet:placeholder:text-sm 
   }
 
   .input-container {
-    @apply flex flex-col gap-2
+    @apply flex flex-col 
   }
 
   .btn-submit {
-    @apply flex w-full justify-center rounded-md bg-primaryDark px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primaryDark
+    @apply flex w-full justify-center rounded-md bg-primaryDark px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm  
   }
 
 }

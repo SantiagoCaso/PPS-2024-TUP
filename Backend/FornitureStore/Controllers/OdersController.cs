@@ -26,12 +26,15 @@ namespace FornitureStore.Controllers
             try
             {
                 var orders = await _orderService.GetAllOrdersAsync();
+
                 return Ok(orders);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al obtener las ordenes.");
-                return StatusCode(500, "Ocurrió un error al procesar su solicitud.");
+
+                var asd = ex.ToString();
+                return StatusCode(500, asd);
             }
             
             

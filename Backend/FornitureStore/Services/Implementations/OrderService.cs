@@ -18,10 +18,16 @@ namespace FornitureStore.Services.Implementations
 
         public async Task<IEnumerable<Order>> GetAllOrdersAsync()
         {
-            return await _fornitureStoreContext.Orders
-                .Include(o => o.OrderDetails)
-                .AsNoTracking()
-                .ToListAsync();
+         
+
+            
+                return await _fornitureStoreContext.Orders
+              .Include(o => o.OrderDetails)
+              .AsNoTracking()
+              .ToListAsync();
+
+           
+
         }
 
         public async Task<Order?> GetOrderByIdAsync(int id)
