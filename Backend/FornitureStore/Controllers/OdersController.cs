@@ -1,4 +1,5 @@
-﻿using FornitureStore.Models.Entities;
+﻿using FornitureStore.Models.Dtos.Orders;
+using FornitureStore.Models.Entities;
 using FornitureStore.Services.Implementations;
 using FornitureStore.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -66,7 +67,7 @@ namespace FornitureStore.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateOrder([FromBody] Order order)
+        public async Task<IActionResult> CreateOrder([FromBody] OrderCreateDto newOrder)
         {
             if (!ModelState.IsValid)
             {
@@ -75,8 +76,8 @@ namespace FornitureStore.Controllers
 
             try
             {
-                await _orderService.AddOrderAsync(order);
-                return CreatedAtAction(nameof(GetOrderById), new { id = order.Id }, order);
+                await _orderService.AddOrderAsync(newOrder);
+                return Ok("Orden creada" +  newOrder);
             }
             catch (Exception ex)
             {
