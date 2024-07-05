@@ -1,4 +1,29 @@
+import { CreditCardInput } from "./Checkout/CreditCardInput";
+import { ExpiryDateInput } from "./Checkout/ExpiryDateInput";
+
 export const Input = ({ name, label, register, placeholder, errors }) => {
+  if (name === 'tarjetaNumero') {
+    return (
+      <CreditCardInput
+        register={register}
+        name={name}
+        placeholder={placeholder}
+        errors={errors}
+      />
+    );
+  }
+
+  if (name === 'expirationDate') {
+    return (
+      <ExpiryDateInput
+        register={register}
+        name={name}
+        placeholder={placeholder}
+        errors={errors}
+      />
+    );
+  }
+
   return (
     <div className="input-container">
       <label className="font-[500] text-gray-700 tracking-tight text-sm tablet:text-base">
