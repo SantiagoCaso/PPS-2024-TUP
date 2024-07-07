@@ -65,9 +65,9 @@ const FornitureChatBot = () => {
           </div>
         ) : (
           <div>
-            <p onClick={handlerChat} className="shadow-xl">
+            <button onClick={handlerChat} className="shadow-xl">
               Abrir chat
-            </p>
+            </button>
           </div>
         )}
       </ThemeProvider>
