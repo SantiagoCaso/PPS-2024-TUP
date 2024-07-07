@@ -1,4 +1,5 @@
 ﻿using FornitureStore.DBContext;
+using FornitureStore.Models.Dtos.Orders;
 using FornitureStore.Models.Entities;
 using FornitureStore.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -62,17 +63,30 @@ namespace FornitureStore.Services.Implementations
                 .AnyAsync(o => o.Id == idOrder);
         }
 
-        public async Task AddOrderAsync(Order order)
+        public async Task AddOrderAsync(OrderCreateDto orderDto)
         {
             try
             {
-                order.Total = order.OrderDetails.Sum(od => od.Price * od.Quantity);
+                var order = new Order
+                {
+                    UserId = orderDto.UserId,
+                    CreatedAt = DateTime.Now,
+                    OrderDetails = orderDto.OrderDetails.Select(od => new OrderDetail
+                    {
+                        ProductId = od.ProductId,
+                        Quantity = od.Quantity,
+                        Price = od.Price
+                    }).ToList(),
+                    Total = orderDto.OrderDetails.Sum(od => od.Price * od.Quantity)
+                };
+
+              
                 await _fornitureStoreContext.Orders.AddAsync(order);
                 await _fornitureStoreContext.SaveChangesAsync();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Error al agregar la orden {order.Id}" );
+                _logger.LogError(ex, $"Error al agregar la orden" );
                 throw;
             }
         }

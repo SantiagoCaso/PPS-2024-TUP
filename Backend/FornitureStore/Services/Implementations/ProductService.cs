@@ -41,7 +41,7 @@ namespace FornitureStore.Services.Implementations
                 .FirstOrDefaultAsync(p => p.Id == idProduct);
         }
 
-        public async Task<IEnumerable<Product>> GetProductsByNameAsync(string productName, int? limit)
+        public async Task<IEnumerable<Product>> GetProductsByNameAsync(string productName)
         {
             
            return  await _fornitureStoreContext.Products

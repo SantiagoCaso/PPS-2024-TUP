@@ -54,12 +54,13 @@ namespace FornitureStore.Controllers
             }
         }
 
-        [HttpGet("search")]
-        public async Task<IActionResult> GetProductsByName(string name, int? limit)
+        [HttpGet]
+        [Route("search/{name}")]
+        public async Task<IActionResult> GetProductsByName(string name)
         {
             try
             {
-                var products = await _productService.GetProductsByNameAsync(name, limit);
+                var products = await _productService.GetProductsByNameAsync(name);
                 if (products == null || !products.Any())
                 {
                     return NotFound();
@@ -151,10 +152,11 @@ namespace FornitureStore.Controllers
                 bool productDeleted = await _productService.DeleteProductAsync(id);
                 if (!productDeleted)
                 {
+                    
                     return NotFound();
                 }
 
-                return NoContent();
+                return Ok($"Product  ID {id} borrado");
             }
             catch (Exception ex)
             {
