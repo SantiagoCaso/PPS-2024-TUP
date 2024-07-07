@@ -41,14 +41,15 @@ export const Register = () => {
           placeholder={"pedro@gmail.com"}
           register={register}
         />
-        <InputPassword
-          errors={errors.password}
-          label={"Contraseña"}
-          name={"password"}
-          placeholder={"******"}
-          register={register}
-        />
-
+        <div>
+          <InputPassword
+            errors={errors.password}
+            label={"Contraseña"}
+            name={"password"}
+            placeholder={"******"}
+            register={register}
+          />
+        </div>
         <button type="submit" className="btn-submit">
           Crear cuenta
         </button>

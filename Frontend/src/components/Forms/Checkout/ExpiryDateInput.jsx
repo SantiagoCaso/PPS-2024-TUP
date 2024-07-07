@@ -11,7 +11,9 @@ export const ExpiryDateInput = ({ register, name, placeholder, errors }) => {
         {...register(name)}
         placeholder={placeholder}
       >
-        {(inputProps) => <input {...inputProps} className="input autofill:bg-red-200" />}
+        {(inputProps) => (
+          <input {...inputProps} className="input autofill:bg-red-200" />
+        )}
       </ReactInputMask>
       <p className="text-red-500 text-[13px] font-medium leading-[13px] mt-1">
         {errors?.message}

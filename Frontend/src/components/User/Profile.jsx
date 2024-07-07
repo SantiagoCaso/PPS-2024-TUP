@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useContext, useEffect, useState } from 'react';
-import { Loader } from '../shared/Loader';
-import { AuthContext } from '../../context/Auth/AuthContext';
-import { GetUserProfile } from '../../services/implementations/user/userService';
+import { useContext, useEffect, useState } from "react";
+import { Loader } from "../shared/Loader";
+import { AuthContext } from "../../context/Auth/AuthContext";
+import { GetUserProfile } from "../../services/implementations/user/userService";
 
 export const Profile = () => {
   const [data, setData] = useState(null);
@@ -14,9 +14,9 @@ export const Profile = () => {
         await verifyUserSession(); // Asegúrate de que verifyUserSession sea una función asincrónica si es asíncrona
         const response = await GetUserProfile(token);
         setData(response.data);
-        console.log('Info perfil: ', response.data);
+        console.log("Info perfil: ", response.data);
       } catch (error) {
-        console.error('Error fetching profile:', error);
+        console.error("Error fetching profile:", error);
       }
     };
     if (token) {
